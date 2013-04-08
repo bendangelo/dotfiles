@@ -1,0 +1,80 @@
+[color]
+    ui = true
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[alias]
+    # loggers
+
+    # display a graph
+    # view lines changes lg -p
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --decorate
+
+    # list last commits
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+    # not very useful
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+    # display file changes
+    lc = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+
+    # display all commits today
+    lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+
+    # grep commit messages
+    lf = !sh -c 'git ls --grep=$1 --max-count=10' - # search
+
+
+    cp = cherry-pick
+
+    pp = !git pull && git push
+
+    aa = add -A
+    unstage = reset HEAD --
+
+    s = status -sb
+
+    c = commit -m
+    ca = commit -am
+    amend = commit --amend            # ammend your last commit
+    release = !git checkout master && git merge @{-1} && git push
+
+    ch = checkout
+    chb = checkout -b
+
+    # dealing with branches
+    br = branch
+    branches = branch -a
+    rmb = !sh -c 'git branch -D $1 && git push origin :$1' - # remove branch from local and remote
+
+    # diffs
+    dlc = diff --cached HEAD^
+    diff = diff --word-diff
+    di = diff --cached # show what has been added to index
+    dc = diff HEAD # show what changed since last commit
+    dl = diff HEAD^                 # diff last committed change
+
+    # reset file
+    rf = checkout --
+
+    # reset everything
+    ra = reset --hard
+
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+
+
+    # random stuff
+    who = shortlog -n -s --no-merges
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
+    # remove dead remote branches, cleanup files, remove untracked files, clear stash
+    cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+
+[mergetool]
+    prompt = false
