@@ -3,6 +3,7 @@
     email = ben@viafoura.com
 [core]
     editor = vim
+    exludesfile = ~/.gitignore
 [color]
     ui = true
 [color "diff"]
@@ -44,6 +45,7 @@
 
     aa = add -A
     unstage = reset HEAD --
+    untrack = rm --cached --
 
     s = status -sb
 
