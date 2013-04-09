@@ -12,5 +12,7 @@
 
     { "keys": ["ctrl+shift+n"], "command": "advanced_new_file"},
 
+    { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"},
+
     { "keys": ["ctrl+shift+g"], "command": "toggle_side_bar" }
 ]

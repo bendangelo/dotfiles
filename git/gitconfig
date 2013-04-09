@@ -38,6 +38,10 @@
 
     pp = !git pull && git push
 
+    # push new branch to remote
+    rp = push -u origin
+    p = push
+
     aa = add -A
     unstage = reset HEAD --
 
@@ -48,8 +52,12 @@
     amend = commit --amend            # ammend your last commit
     release = !git checkout master && git merge @{-1} && git push
 
+    # changing branches
     ch = checkout
     chb = checkout -b
+    master = checkout master
+    dev = checkout dev
+    rc = checkout rc
 
     # dealing with branches
     br = branch
@@ -77,6 +85,11 @@
     # random stuff
     who = shortlog -n -s --no-merges
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+    me = config user.name
+
+    # display all aliases
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+    ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 
     # remove dead remote branches, cleanup files, remove untracked files, clear stash
     cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
