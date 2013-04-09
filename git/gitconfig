@@ -1,8 +1,8 @@
 [user]
-   name = Ben D'Angelo
-   email = ben.dangelo2@gmail.com
+    name = Ben D'Angelo
+    email = ben@viafoura.com
 [core]
-   editor = vim
+    editor = vim
 [color]
     ui = true
 [color "diff"]

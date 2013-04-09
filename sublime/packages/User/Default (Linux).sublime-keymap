@@ -1,0 +1,16 @@
+[
+
+    { "keys": ["ctrl+shift+u"], "command": "upper_case" },
+    { "keys": ["ctrl+shift+l"], "command": "lower_case" },
+
+    { "keys": ["f2"], "command": "quick_file_move" },
+
+    { "keys": ["alt+up"], "command": "move_caret_top" },
+    { "keys": ["ctrl+up"], "command": "move_caret_back", "args": { "nlines": 5}  },
+    { "keys": ["ctrl+down"], "command": "move_caret_forward", "args": { "nlines": 5} },
+    { "keys": ["alt+down"], "command": "move_caret_bottom"},
+
+    { "keys": ["ctrl+shift+n"], "command": "advanced_new_file"},
+
+    { "keys": ["ctrl+shift+g"], "command": "toggle_side_bar" }
+]

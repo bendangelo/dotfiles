@@ -1,0 +1,20 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"CoffeeScript",
+		"Dayle Rees Color Schemes",
+		"Git",
+		"Jade",
+		"JsFormat",
+		"LESS",
+		"Package Control",
+		"SideBarEnhancements",
+		"sublime-text-2-quick-file-move",
+		"SublimeLinter",
+		"ToggleQuotes",
+		"Tomorrow Color Schemes"
+	]
+}
