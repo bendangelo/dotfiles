@@ -90,6 +90,7 @@
     # display all aliases
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
     ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+    ignored = status --ignored
 
     # remove dead remote branches, cleanup files, remove untracked files, clear stash
     cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
