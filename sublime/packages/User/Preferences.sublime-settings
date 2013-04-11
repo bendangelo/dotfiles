@@ -1,8 +1,9 @@
 {
-	"color_scheme": "Packages/Dayle Rees Color Schemes/NaturalContrast.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/Patriot.tmTheme",
 	"font_size": 8,
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+	"theme": "Flatland.sublime-theme"
 }

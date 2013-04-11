@@ -52,7 +52,7 @@
     c = commit -m
     ca = commit -am
     amend = commit --amend            # ammend your last commit
-    release = !git checkout master && git merge @{-1} && git push
+    release = !git checkout master && git pull && git merge dev && git push && cap deploy
 
     # changing branches
     ch = checkout
@@ -62,8 +62,8 @@
     rc = checkout rc
 
     # dealing with branches
-    br = branch
-    branches = branch -a
+    b = branch
+    bs = branch -a
     rmb = !sh -c 'git branch -D $1 && git push origin :$1' - # remove branch from local and remote
 
     # diffs
