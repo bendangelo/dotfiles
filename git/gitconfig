@@ -43,7 +43,7 @@
     pr = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
     p = push
 
-    aa = add -A
+    a = add -A
     unstage = reset HEAD --
     untrack = rm --cached --
     undelete = git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
