@@ -20,19 +20,19 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --decorate
 
     # list last commits
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 
     # not very useful
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
     # display file changes
-    lc = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+    lc = log --pretty=format:"%h %cr %cn %Cgreen%s%Creset" --name-status
 
     # display all commits today
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 
     # grep commit messages
-    lf = !sh -c 'git ls --grep=$1 --max-count=10' - # search
+    lf = !sh -c 'git l --grep=$1 --max-count=10' - # search
 
 
     cp = cherry-pick
