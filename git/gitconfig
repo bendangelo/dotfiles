@@ -68,7 +68,7 @@
 
     # dealing with branches
     b = branch
-    bs = branch -a
+    br = branch -a
     rmb = !sh -c 'git branch -D $1 && git push origin :$1' - # remove branch from local and remote
 
     # diffs
