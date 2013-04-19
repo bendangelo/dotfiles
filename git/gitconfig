@@ -46,13 +46,14 @@
     a = add -A
     unstage = reset HEAD --
     untrack = rm --cached --
-    undelete = git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+    undelete = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 
     s = status -sb
 
     c = commit -m
     ca = commit -am
-    amend = commit --amend            # ammend your last commit
+    amend = commit --amend            # rename your last commit
+    uncommit = reset HEAD^ # undos the last commit
     release = !git checkout master && git pull && git merge dev && git push && cap deploy
 
     # changing branches
