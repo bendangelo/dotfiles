@@ -1,0 +1,3 @@
+# redo last command with sudo
+alias sorry='sudo $(history -p !-1)'
+

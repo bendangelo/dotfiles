@@ -1,6 +1,8 @@
 [user]
     name = Ben D'Angelo
     email = ben@viafoura.com
+[push]
+    default = matching
 [core]
     editor = vim
     exludesfile = ~/.gitignore
