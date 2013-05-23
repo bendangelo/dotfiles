@@ -11,12 +11,15 @@ is_py2k = sys.version_info < (3, 0)
 def add_lib_path(lib_path):
 	def _try_get_short_path(path):
 		path = os.path.normpath(path)
-		if is_py2k and os.name == 'nt':
-			from ctypes import windll, create_unicode_buffer
-			buf = create_unicode_buffer(512)
-			path = unicode(path)
-			if windll.kernel32.GetShortPathNameW(path, buf, len(buf)):
-				path = buf.value
+		if is_py2k and os.name == 'nt' and isinstance(path, unicode):
+			try:
+				import locale
+				path = path.encode(locale.getpreferredencoding())
+			except:
+				from ctypes import windll, create_unicode_buffer
+				buf = create_unicode_buffer(512)
+				if windll.kernel32.GetShortPathNameW(path, buf, len(buf)):
+					path = buf.value
 		return path
 	lib_path = _try_get_short_path(lib_path)
 	if lib_path not in sys.path:
@@ -40,23 +43,25 @@ def plugin_loaded():
 if is_py2k:
 	plugin_loaded()
 
+
+def is_js_buffer(view):
+	fName = view.file_name()
+	vSettings = view.settings()
+	syntaxPath = vSettings.get('syntax')
+	syntax = ""
+	ext = ""
+
+	if (fName != None): # file exists, pull syntax type from extension
+		ext = os.path.splitext(fName)[1][1:]
+	if(syntaxPath != None):
+		syntax = os.path.splitext(syntaxPath)[0].split('/')[-1].lower()
+
+	return ext in ['js', 'json'] or "javascript" in syntax or "json" in syntax
+
 class PreSaveFormatListner(sublime_plugin.EventListener):
 	"""Event listener to run JsFormat during the presave event"""
 	def on_pre_save(self, view):
-		fName = view.file_name()
-		vSettings = view.settings()
-		syntaxPath = vSettings.get('syntax')
-		syntax = ""
-		ext = ""
-
-		if (fName != None): # file exists, pull syntax type from extension
-			ext = os.path.splitext(fName)[1][1:]
-		if(syntaxPath != None):
-			syntax = os.path.splitext(syntaxPath)[0].split('/')[-1].lower()
-
-		formatFile = ext in ['js', 'json'] or "javascript" in syntax or "json" in syntax
-
-		if(s.get("format_on_save") == True and formatFile):
+		if(s.get("format_on_save") == True and is_js_buffer(view)):
 			view.run_command("js_format")
 
 
@@ -70,6 +75,7 @@ class JsFormatCommand(sublime_plugin.TextCommand):
 		opts.indent_size = int(settings.get("tab_size")) if opts.indent_char == " " else 1
 		opts.max_preserve_newlines = s.get("max_preserve_newlines") or 3
 		opts.preserve_newlines = s.get("preserve_newlines") or True
+		opts.space_in_paren = s.get("space_in_paren") or False
 		opts.jslint_happy = s.get("jslint_happy") or False
 		opts.brace_style = s.get("brace_style") or "collapse"
 		opts.keep_array_indentation = s.get("keep_array_indentation") or False
@@ -160,9 +166,22 @@ class JsFormatCommand(sublime_plugin.TextCommand):
 
 	def format_whole_file(self, edit, opts):
 		view = self.view
+		settings = view.settings()
 		region = sublime.Region(0, view.size())
 		code = view.substr(region)
 		formatted_code = jsbeautifier.beautify(code, opts)
+
+		if(settings.get("ensure_newline_at_eof_on_save") and not formatted_code.endswith("\n")):
+			lineEnding = {
+				'system': os.linesep,
+				'windows': "\r\n",
+				'unix': "\n"
+			}[settings.get("default_line_ending")]
+			formatted_code = formatted_code + lineEnding
+
 		_, err = merge_utils.merge_code(view, edit, code, formatted_code)
 		if err:
 			sublime.error_message("JsFormat: Merge failure: '%s'" % err)
+
+	def is_visible(self):
+		return is_js_buffer(self.view)
