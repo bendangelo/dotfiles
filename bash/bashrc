@@ -4,6 +4,8 @@ alias sorry='sudo $(history -p !-1)'
 EDITOR="vim"
 export EDITOR
 
+alias untar='tar -zxvf'
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
