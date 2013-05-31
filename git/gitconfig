@@ -92,6 +92,8 @@
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 
+    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 
     # random stuff
     who = shortlog -n -s --no-merges
