@@ -17,3 +17,5 @@ rm ~/.config/sublime-text-2/Pristine\ Packages -r
 ln -s $SCRIPTPATH/sublime/installed\ packages ~/.config/sublime-text-2/Installed\ Packages
 ln -s $SCRIPTPATH/sublime/packages ~/.config/sublime-text-2/Packages
 ln -s $SCRIPTPATH/sublime/pristine\ packages ~/.config/sublime-text-2/Pristine\ Packages
+
+echo ". $(pwd)/bashrc" >> ~/.bashrc
