@@ -34,7 +34,9 @@
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 
     # grep commit messages
-    lf = !sh -c 'git l --grep=$1 --max-count=10' - # search
+    lgr = !sh -c 'git l --grep=$1 --max-count=10' - # search
+
+    lf = log -p # changes of a file
 
 
     cp = cherry-pick
@@ -74,11 +76,11 @@
     rmb = !sh -c 'git branch -D $1 && git push origin :$1' - # remove branch from local and remote
 
     # diffs
-    dlc = diff --cached HEAD^
+    dlc = diff --cached HEAD^ #
     diff = diff --word-diff
-    di = diff --cached # show what has been added to index
+    di = diff --cached # show what has changed but has not been added to the index yet via get add
     dc = diff HEAD # show what changed since last commit
-    dl = diff HEAD^                 # diff last committed change
+    dl = diff HEAD^                 # show what has changed since the commit before the latest commit
 
     # reset file
     rf = checkout --
