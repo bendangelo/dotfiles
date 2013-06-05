@@ -19,5 +19,10 @@
     { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"},
 
     { "keys": ["ctrl+shift+g"], "command": "toggle_side_bar" },
-    { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}}
+    { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}},
+
+    { "keys": ["super+v"], "command": "paste_and_indent" },
+    { "keys": ["super+shift+v"], "command": "paste" },
+
+    { "keys": ["ctrl+."], "command": "insert", "args":{"characters":"debugger;"}}
 ]
