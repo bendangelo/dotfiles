@@ -24,5 +24,7 @@
     { "keys": ["super+v"], "command": "paste_and_indent" },
     { "keys": ["super+shift+v"], "command": "paste" },
 
-    { "keys": ["ctrl+."], "command": "insert", "args":{"characters":"debugger;"}}
+    { "keys": ["ctrl+alt+w"], "command": "close_all" },
+
+    { "keys": ["ctrl+."], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
 ]

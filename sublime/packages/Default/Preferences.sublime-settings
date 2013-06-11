@@ -98,7 +98,7 @@
     "draw_minimap_border": false,
 
     // If enabled, will highlight any line with a caret
-    "highlight_line": true,
+    "highlight_line": false,
 
     // Valid values are "smooth", "phase", "blink", "wide" and "solid".
     "caret_style": "smooth",
