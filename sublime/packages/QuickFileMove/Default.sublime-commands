@@ -1,7 +1,0 @@
-[
-    {
-        "caption": "Quick File Move: Move Current File",
-        "command": "quick_file_move",
-        "args": {}
-    }
-]
