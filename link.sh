@@ -17,5 +17,7 @@ rm ~/.config/sublime-text-2/Packages/User -r
 
 ln -s $SCRIPTPATH/sublime ~/.config/sublime-text-2/Packages/User
 
+echo "source ~/.config/z/z.sh" >> ~/.bashrc
 echo ". $SCRIPTPATH/bash/bashrc" >> ~/.bashrc
-echo ". ~/.config/z/z.sh" >> ~/.bashrc
+
+. ~/.bashrc

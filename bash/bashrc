@@ -45,7 +45,4 @@ alias watch='ping -i 60 -a'
 # wget to grab file
 alias share='nc -v -l 9001 <'
 
-# stream a video from youtube
-#alias ysteam='mplayer -fs $(curl -s "http://www.youtube.com/get_video_info?&video_id=$1" | echo -e $(sed \'s/%/\\x/g;s/.*\(v[0-9]\.lscache.*\)/http:\/\/\1/g') | grep -oP '^[^|,]*\')'
-
 alias 'ps?'='ps x | grep '
