@@ -6,9 +6,14 @@ export EDITOR
 
 alias untar='tar -zxvf'
 
+# download and untar
+alias wtar='wget -qO - "http://www.tarball.com/tarball.gz" | tar zxvf -'
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lr='ls -R'
+
 alias up='sudo apt-get update; sudo apt-get upgrade'
 alias .='cd ..'
 alias ..='cd ../..'
@@ -21,3 +26,26 @@ alias ff='find . -name $1'
 alias wget='wget -c'
 
 alias dsp='sshfs lautan@ice.throwthegame.com:projects/onetimexi'
+
+# display folder sizes in order
+alias foldsize='du -xB M --max-depth=2 $1 | sort -rn | head -n 15'
+
+# keep trying until it succeeds
+alias dountil='until !!; do :; done'
+
+alias myip='curl ifconfig.me'
+
+alias sshdiff='ssh $1 cat $2 | diff $3 -'
+alias gmail='curl -u ben.dangelo2@gmail.com --silent "https://mail.google.com/mail/feed/atom" | perl -ne "print \"\t\" if /<name>/; print \"$2\n\" if /<(title|name)>(.*)<\/\1>/;"'
+
+# send alert when connected to server
+alias watch='ping -i 60 -a'
+
+# share a file over network
+# wget to grab file
+alias share='nc -v -l 9001 <'
+
+# stream a video from youtube
+#alias ysteam='mplayer -fs $(curl -s "http://www.youtube.com/get_video_info?&video_id=$1" | echo -e $(sed \'s/%/\\x/g;s/.*\(v[0-9]\.lscache.*\)/http:\/\/\1/g') | grep -oP '^[^|,]*\')'
+
+alias 'ps?'='ps x | grep '

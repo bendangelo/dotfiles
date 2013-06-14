@@ -74,6 +74,9 @@
     b = branch
     ba = branch -a
     rmb = !sh -c 'git branch -D $1 && git push origin :$1' - # remove branch from local and remote
+	
+    # remove branches that don't have a remote branch
+    bclean = !git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
 
     # diffs
     dlc = diff --cached HEAD^ #
