@@ -1,15 +1,9 @@
 [
 
-    { "keys": ["ctrl+shift+u"], "command": "upper_case" },
-    { "keys": ["ctrl+shift+l"], "command": "lower_case" },
-
     { "keys": ["f2"], "command": "quick_file_move" },
 
-    { "keys": ["alt+pageup"], "command": "move_caret_top" },
-    { "keys": ["alt+pagedown"], "command": "move_caret_bottom"},
-
-    { "keys": ["shift+pageup"], "command": "move_caret_back", "args": { "nlines": 12}  },
-    { "keys": ["shift+pagedown"], "command": "move_caret_forward", "args": { "nlines": 12} },
+    { "keys": ["alt+up"], "command": "move_caret_top" },
+    { "keys": ["alt+down"], "command": "move_caret_bottom"},
 
     { "keys": ["ctrl+up"], "command": "move_caret_back", "args": { "nlines": 5}  },
     { "keys": ["ctrl+down"], "command": "move_caret_forward", "args": { "nlines": 5} },
@@ -26,5 +20,10 @@
 
     { "keys": ["ctrl+alt+w"], "command": "close_all" },
 
-    { "keys": ["ctrl+."], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
+    { "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+    { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+
+    { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"} },
+
+    { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
 ]

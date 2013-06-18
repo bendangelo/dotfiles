@@ -13,6 +13,7 @@
 		"JS2Coffee",
 		"JsFormat",
 		"LESS",
+		"Move Tabs",
 		"Package Control",
 		"QuickFileMove",
 		"ruby-slim.tmbundle",
@@ -21,7 +22,6 @@
 		"Stylus",
 		"sublime-text-2-quick-file-move",
 		"SublimeLinter",
-		"ToggleQuotes",
 		"Tomorrow Color Schemes"
 	]
 }
