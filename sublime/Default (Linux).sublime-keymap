@@ -3,7 +3,7 @@
     { "keys": ["ctrl+shift+u"], "command": "upper_case" },
     { "keys": ["ctrl+shift+l"], "command": "lower_case" },
 
-    { "keys": ["f2"], "command": "quick_file_move" },
+    { "keys": ["f2"], "command": "side_bar_move" },
 
     { "keys": ["alt+pageup"], "command": "move_caret_top" },
     { "keys": ["alt+pagedown"], "command": "move_caret_bottom"},

@@ -1,9 +1,9 @@
 {
-	"color_scheme": "Packages/Dayle Rees Color Schemes/Goldfish.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/Peacock.tmTheme",
 	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"theme": "Flatland.sublime-theme"
+	"theme": "Flatland Dark.sublime-theme"
 }
