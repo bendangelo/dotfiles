@@ -13,6 +13,7 @@
 		"JS2Coffee",
 		"JsFormat",
 		"LESS",
+		"Move Tabs",
 		"Package Control",
 		"ruby-slim.tmbundle",
 		"SCSS",
@@ -20,7 +21,6 @@
 		"Stylus",
 		"SublimeLinter",
 		"Theme - Flatland",
-		"ToggleQuotes",
 		"Tomorrow Color Schemes"
 	]
 }
