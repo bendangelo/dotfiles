@@ -25,7 +25,7 @@ alias ff='find . -name $1'
 
 alias wget='wget -c'
 
-alias dsp='sshfs lautan@ice.throwthegame.com:projects/onetimexi'
+alias dsp='sshfs lautan@ice.throwthegame.com:projects/onetimexi ~/Projects/ice'
 
 # display folder sizes in order
 alias foldsize='du -xB M --max-depth=2 $1 | sort -rn | head -n 15'
@@ -39,10 +39,10 @@ alias sshdiff='ssh $1 cat $2 | diff $3 -'
 alias gmail='curl -u ben.dangelo2@gmail.com --silent "https://mail.google.com/mail/feed/atom" | perl -ne "print \"\t\" if /<name>/; print \"$2\n\" if /<(title|name)>(.*)<\/\1>/;"'
 
 # send alert when connected to server
-alias watch='ping -i 60 -a'
+alias watch='ping -i 60 -a $1'
 
 # share a file over network
 # wget to grab file
-alias share='nc -v -l 9001 <'
+alias share='nc -v -l 9001 < $1'
 
-alias 'ps?'='ps x | grep '
+alias 'ps?'='ps x | grep $1'

@@ -1,6 +1,5 @@
 [
-
-    { "keys": ["f2"], "command": "quick_file_move" },
+    { "keys": ["f2"], "command": "side_bar_move" },
 
     { "keys": ["alt+up"], "command": "move_caret_top" },
     { "keys": ["alt+down"], "command": "move_caret_bottom"},
