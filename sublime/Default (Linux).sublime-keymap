@@ -14,6 +14,8 @@
     { "keys": ["ctrl+shift+g"], "command": "toggle_side_bar" },
     { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}},
 
+    { "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "indentation"} },
+
     { "keys": ["super+v"], "command": "paste_and_indent" },
     { "keys": ["super+shift+v"], "command": "paste" },
 
@@ -22,9 +24,9 @@
     { "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
     { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
-    { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"} },
     
     { "keys": ["f5"], "command": "refresh_folder_list" },
+    { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to BOL.sublime-macro"} },
 
     { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
 ]

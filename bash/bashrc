@@ -1,6 +1,10 @@
 # redo last command with sudo
 alias sorry='sudo $(history -p !-1)'
 
+SCRIPT=$(readlink -f bin)
+
+PATH=$PATH:"$SCRIPT"
+
 EDITOR="vim"
 export EDITOR
 
@@ -33,7 +37,7 @@ alias foldsize='du -xB M --max-depth=2 $1 | sort -rn | head -n 15'
 # keep trying until it succeeds
 alias dountil='until !!; do :; done'
 
-alias myip='curl ifconfig.me'
+alias myip='curl ifconfig.me --silent'
 
 alias sshdiff='ssh $1 cat $2 | diff $3 -'
 alias gmail='curl -u ben.dangelo2@gmail.com --silent "https://mail.google.com/mail/feed/atom" | perl -ne "print \"\t\" if /<name>/; print \"$2\n\" if /<(title|name)>(.*)<\/\1>/;"'
