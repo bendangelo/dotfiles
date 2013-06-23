@@ -23,6 +23,8 @@
     { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
     { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"} },
+    
+    { "keys": ["f5"], "command": "refresh_folder_list" },
 
     { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
 ]
