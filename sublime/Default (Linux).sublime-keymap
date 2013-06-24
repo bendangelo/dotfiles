@@ -24,9 +24,11 @@
     { "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
     { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 
-    
+
     { "keys": ["f5"], "command": "refresh_folder_list" },
     { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to BOL.sublime-macro"} },
 
-    { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}}
+    { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger; // <-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"}},
+
+    { "keys": ["ctrl+shift+`"], "command": "insert", "args":{"characters":"`"}}
 ]
