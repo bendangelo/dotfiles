@@ -1,9 +1,12 @@
 {
-	"color_scheme": "Packages/Dayle Rees Color Schemes/Grunge.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/Frontier.tmTheme",
 	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"theme": "Flatland Dark.sublime-theme"
+	"scroll_speed": 2.0,
+	"theme": "Flatland Dark.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }
