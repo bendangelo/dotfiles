@@ -15,6 +15,7 @@
     { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}},
 
     { "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "indentation"} },
+    {"keys": ["ctrl+shift+c"], "command": "expand_selection_to_quotes"},
 
     { "keys": ["super+v"], "command": "paste_and_indent" },
     { "keys": ["super+shift+v"], "command": "paste" },
