@@ -11,7 +11,6 @@
 
     { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"},
 
-    { "keys": ["ctrl+shift+g"], "command": "toggle_side_bar" },
     { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}},
 
     { "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "indentation"} },
