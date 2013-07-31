@@ -57,7 +57,7 @@
     c = commit -m
     ca = commit -am
     amend = commit --amend            # rename your last commit
-    uncommit = reset HEAD^ # undos the last commit
+    uncommit = reset --soft HEAD^ # undos the last commit
     # deploy rails
     deploy = !git checkout master && git pull && git merge dev && git push && cap deploy
     # deploy npm package
