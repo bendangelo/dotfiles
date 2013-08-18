@@ -3,9 +3,12 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"Alignment",
+		"Better CoffeeScript",
 		"CoffeeScript",
 		"Color Highlighter",
 		"Dayle Rees Color Schemes",
+		"EasyMotion",
 		"Expand Selection to Quotes",
 		"Expand Selection to Whitespace",
 		"Gist",
@@ -15,6 +18,7 @@
 		"JS2Coffee",
 		"JsFormat",
 		"LESS",
+		"Move Tabs",
 		"Package Control",
 		"ruby-slim.tmbundle",
 		"SCSS",
@@ -22,6 +26,7 @@
 		"Stylus",
 		"SublimeLinter",
 		"Theme - Flatland",
+		"ToggleQuotes",
 		"Tomorrow Color Schemes"
 	]
 }
