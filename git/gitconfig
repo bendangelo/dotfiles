@@ -82,8 +82,6 @@
     dc = diff HEAD # show what changed since last commit
     dl = diff HEAD^                 # show what has changed since the commit before the latest commit
 
-    check = !git diff HEAD | ack '(console|debugger)'
-
     # reset file
     rf = checkout --
 
