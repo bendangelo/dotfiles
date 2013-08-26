@@ -14,6 +14,9 @@
     old = red bold
     new = green bold
 
+[heroku]
+    remote = staging
+
 [alias]
     # loggers
 
@@ -60,6 +63,9 @@
     uncommit = reset --soft HEAD^ # undos the last commit
     # deploy rails
     deploy = !git checkout master && git pull && git merge dev && git push && cap deploy
+    production = !git checkout master && git pull && git merge dev && git push && git push production master
+    staging = !git checkout dev && git pull && git push staging dev:master
+
     # deploy npm package
     publish = !git checkout master && git pull && git merge dev && git push && npm publish
 
