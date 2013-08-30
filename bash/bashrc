@@ -40,7 +40,6 @@ alias dountil='until !!; do :; done'
 alias myip='curl ifconfig.me --silent'
 
 alias sshdiff='ssh $1 cat $2 | diff $3 -'
-alias gmail='curl -u ben.dangelo2@gmail.com --silent "https://mail.google.com/mail/feed/atom" | perl -ne "print \"\t\" if /<name>/; print \"$2\n\" if /<(title|name)>(.*)<\/\1>/;"'
 
 # send alert when connected to server
 alias watch='ping -i 60 -a $1'
@@ -48,5 +47,6 @@ alias watch='ping -i 60 -a $1'
 # share a file over network
 # wget to grab file
 alias share='nc -v -l 9001 < $1'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 
 alias 'ps?'='ps x | grep $1'
