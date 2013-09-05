@@ -98,6 +98,11 @@
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 
+    # fetch and show what would be merged (use option "-p" to see patch)
+    incoming = "!git remote update -p; git log ..@{u}"
+    # what would be pushed (currently committed); see also alias difr
+    outgoing = log @{u}..
+
     ours = "!f() { git checkout --ours $@ && git add $@; }; f"
     theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 
