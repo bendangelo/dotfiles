@@ -7,7 +7,7 @@ EDITOR="vim"
 export EDITOR
 
 # edit prompt
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\[\e[32;1m\]\w\[\e[0m\]\$ "
+#export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\[\e[32;1m\]\w\[\e[0m\]\$ "
 
 alias ll='ls -alF'
 alias la='ls -A'
