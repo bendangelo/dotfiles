@@ -1,17 +1,10 @@
 # redo last command with sudo
-alias sorry='sudo $(history -p !-1)'
-
 SCRIPT=$(readlink -f bin)
 
 PATH=$PATH:"$SCRIPT"
 
 EDITOR="vim"
 export EDITOR
-
-alias untar='tar -zxvf'
-
-# download and untar
-alias wtar='wget -qO - "http://www.tarball.com/tarball.gz" | tar zxvf -'
 
 alias ll='ls -alF'
 alias la='ls -A'
