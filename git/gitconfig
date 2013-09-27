@@ -22,7 +22,7 @@
 
     # display a graph
     # view lines changes lg -p
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --decorate
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date=relative --decorate
 
     # list last commits
     l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -30,8 +30,8 @@
     # not very useful
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
-    # display file changes
-    ls = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+    # display file changes per commit
+    ls = log --pretty=format:\"%C(yellow)%h %Cgreen(%cr)%Creset %s %C(bold blue)[%cn]%Creset\" --name-status
 
     # display all commits today
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
@@ -87,6 +87,7 @@
     di = diff --cached # show what has changed but has not been added to the index yet via get add
     dc = diff HEAD # show what changed since last commit
     dl = diff HEAD^                 # show what has changed since the commit before the latest commit
+    ds = diff --staged
 
     # reset file
     rf = checkout --
