@@ -5,9 +5,11 @@
 		"AdvancedNewFile",
 		"Alignment",
 		"Better CoffeeScript",
+		"ChangeQuotes",
 		"CoffeeScript",
 		"Color Highlighter",
 		"Dayle Rees Color Schemes",
+		"DocBlockr",
 		"EasyMotion",
 		"Expand Selection to Quotes",
 		"Expand Selection to Whitespace",
@@ -26,6 +28,7 @@
 		"Stylus",
 		"SublimeLinter",
 		"Theme - Flatland",
+		"Toggle words",
 		"ToggleQuotes",
 		"Tomorrow Color Schemes"
 	]

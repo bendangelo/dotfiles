@@ -20,10 +20,7 @@
     { "keys": ["super+shift+v"], "command": "paste" },
 
     { "keys": ["ctrl+alt+w"], "command": "close_all" },
-
-    { "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
-    { "keys": ["ctrl+'"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
-
+    { "keys": ["ctrl+'"], "command": "change_quotes" },
 
     { "keys": ["f5"], "command": "refresh_folder_list" },
     { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to BOL.sublime-macro"} },
