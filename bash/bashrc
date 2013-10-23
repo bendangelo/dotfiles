@@ -21,7 +21,7 @@ alias ...='cd ../../..'
 alias ....='cd ../../../..'
 
 alias ports='netstat -tulanp'
-alias ff='find . -name $1'
+alias ff='find . -iname $1'
 
 alias wget='wget -c'
 
