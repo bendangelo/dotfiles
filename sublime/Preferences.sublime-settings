@@ -1,10 +1,11 @@
 {
-	"color_scheme": "Packages/Dayle Rees Color Schemes/Mellow.tmTheme",
+	"color_scheme": "Packages/Dayle Rees Color Schemes/Frontier.tmTheme",
 	"flatland_sidebar_tree_xsmall": true,
 	"flatland_square_tabs": true,
 	"font_size": 9,
 	"ignored_packages":
 	[
+		"Better CoffeeScript",
 		"Vintage",
 		"Tomorrow Color Schemes",
 		"ToggleQuotes"

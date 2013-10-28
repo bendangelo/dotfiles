@@ -4,6 +4,7 @@
 	[
 		"AdvancedNewFile",
 		"Alignment",
+		"ApplySyntax",
 		"Better CoffeeScript",
 		"ChangeQuotes",
 		"CoffeeScript",
@@ -16,6 +17,7 @@
 		"Gist",
 		"Git",
 		"Handlebars",
+		"Invert Selection",
 		"Jade",
 		"JS2Coffee",
 		"JsFormat",
