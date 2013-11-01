@@ -4,6 +4,7 @@
 	[
 		"AdvancedNewFile",
 		"Alignment",
+		"ApplySyntax",
 		"Better CoffeeScript",
 		"ChangeQuotes",
 		"CoffeeScript",
@@ -23,6 +24,7 @@
 		"Move Tabs",
 		"Package Control",
 		"ruby-slim.tmbundle",
+		"Sass",
 		"SCSS",
 		"SideBarEnhancements",
 		"Stylus",
