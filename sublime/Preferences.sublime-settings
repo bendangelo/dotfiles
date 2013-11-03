@@ -2,7 +2,8 @@
 	"color_scheme": "Packages/Dayle Rees Color Schemes/Frontier.tmTheme",
 	"flatland_sidebar_tree_xsmall": true,
 	"flatland_square_tabs": true,
-	"font_size": 9,
+	"font_face": "Liberation Mono",
+	"font_size": 8,
 	"ignored_packages":
 	[
 		"Better CoffeeScript",
@@ -10,7 +11,7 @@
 		"Tomorrow Color Schemes",
 		"ToggleQuotes"
 	],
-	"scroll_speed": 2.0,
+	"scroll_speed": 1.0,
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
