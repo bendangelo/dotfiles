@@ -28,13 +28,18 @@ Bundle 'L9'
 " scripts not on GitHub
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'Yggdroot/indentLine'
+Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdcommenter'
 " ...
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 map <C-n> :NERDTreeToggle<CR>
 
-" size of a hard tabstop
+let g:indentLine_faster = 1
+
 set tabstop=4
 
 " size of an "indent"
