@@ -28,6 +28,8 @@
 
     { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger                ; \n"}},
 
+    {"keys": ["ctrl+space"], "command": "expand_selection_to_whitespace"},
+
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
 
     { "keys": ["ctrl+shift+`"], "command": "insert", "args":{"characters":"`"}}

@@ -1,6 +1,5 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Dayle Rees Color Schemes/PeacocksInSpace.tmTheme",
 	"flatland_sidebar_tree_xsmall": true,
 	"flatland_square_tabs": true,
 	"font_face": "Liberation Mono",
@@ -8,6 +7,7 @@
 	"ignored_packages":
 	[
 		"AdvancedNewFile",
+		"Better CoffeeScript",
 		"Tomorrow Color Schemes",
 		"Vintage",
 		"Stylus",
@@ -18,5 +18,6 @@
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true,
 	"word_wrap": true
 }
