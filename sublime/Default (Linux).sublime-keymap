@@ -2,6 +2,7 @@
     { "keys": ["f2"], "command": "side_bar_move" },
 
     { "keys": ["alt+up"], "command": "move_caret_top" },
+    { "keys": ["ctrl+space"], "command": "expand_selection_to_whitespace" },
     { "keys": ["alt+down"], "command": "move_caret_bottom"},
 
     { "keys": ["ctrl+up"], "command": "move_caret_back", "args": { "nlines": 5}  },
