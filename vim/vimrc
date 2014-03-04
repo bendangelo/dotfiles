@@ -33,10 +33,11 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'terryma/vim-multiple-cursors'
 " ...
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-map <C-n> :NERDTreeToggle<CR>
+map <C-k>b :NERDTreeToggle<CR>
 
 let g:indentLine_faster = 1
 
