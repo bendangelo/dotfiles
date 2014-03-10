@@ -1,12 +1,26 @@
+set t_Co=256
 set nocompatible              " be iMproved, required
 set number
 filetype off                  " required
+syntax on
+set mouse=a
+set background=dark
+
+" Auto indent
+filetype indent on
+set autoindent
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 let mapleader=","
+
+set pastetoggle=<F10>
 set incsearch
+set noswapfile
+set nobackup
+set autoread
+
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -29,13 +43,14 @@ Bundle 'L9'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'flazz/vim-colorschemes'
-Bundle 'Yggdroot/indentLine'
+Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'ack.vim'
 " ...
-
+colo 256-grayvim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 map <C-k>b :NERDTreeToggle<CR>
 
