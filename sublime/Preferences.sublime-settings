@@ -6,12 +6,11 @@
 	"font_size": 8,
 	"ignored_packages":
 	[
-		"AdvancedNewFile",
-		"Better CoffeeScript",
-		"Tomorrow Color Schemes",
 		"Stylus",
-		"ToggleQuotes",
-		"Better CoffeeScript"
+		"AdvancedNewFile",
+		"Tomorrow Color Schemes",
+		"Better CoffeeScript",
+		"ToggleQuotes"
 	],
 	"scroll_speed": 1.0,
 	"theme": "Flatland Dark.sublime-theme",

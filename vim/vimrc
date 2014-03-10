@@ -42,19 +42,22 @@ Bundle 'L9'
 " scripts not on GitHub
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'flazz/vim-colorschemes'
+Bundle 'jonathanfilip/vim-lucius'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'bling/vim-airline'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'ack.vim'
 " ...
-colo 256-grayvim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 map <C-k>b :NERDTreeToggle<CR>
 
+colorscheme default
 let g:indentLine_faster = 1
+set laststatus=2
+set ttimeoutlen=50
 
 set tabstop=4
 
