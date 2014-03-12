@@ -11,6 +11,7 @@
     { "keys": ["ctrl+shift+n"], "command": "advanced_new_file"},
 
     { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar"},
+    { "keys": ["ctrl+o"], "command": "goto_recent"},
 
     { "keys": ["ctrl+shift+j"], "command": "js_coffee", "args":{"new_file": false}},
 
@@ -32,12 +33,5 @@
 
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
 
-    { "keys": ["ctrl+shift+`"], "command": "insert", "args":{"characters":"`"}},
-    { "keys": ["i", "i"], "command": "exit_insert_mode",
-      "context":
-      [
-        { "key": "setting.command_mode", "operand": false },
-        { "key": "setting.is_widget", "operand": false }
-      ]
-    }
+    { "keys": ["ctrl+shift+`"], "command": "insert", "args":{"characters":"`"}}
 ]
