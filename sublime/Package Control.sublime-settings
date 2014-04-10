@@ -19,6 +19,7 @@
 		"Git",
 		"GotoRecent",
 		"Handlebars",
+		"Inline Calculator",
 		"Invert Selection",
 		"Jade",
 		"JS2Coffee",
@@ -31,10 +32,13 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"Stylus",
+		"SublimeGit",
 		"SublimeLinter",
+		"Surround",
 		"Theme - Flatland",
 		"Toggle words",
 		"ToggleQuotes",
-		"Tomorrow Color Schemes"
+		"Tomorrow Color Schemes",
+		"Vintage Surround"
 	]
 }
