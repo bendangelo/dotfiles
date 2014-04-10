@@ -32,6 +32,8 @@
     {"keys": ["ctrl+space"], "command": "expand_selection_to_whitespace"},
 
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
+   {"keys": ["g", "t"], "command": "next_view", "context": [{"key":"setting.command_mode", "operand": true }]},
+
     { "keys": ["j", "j"], "command": "exit_insert_mode",
     "context":
         [
