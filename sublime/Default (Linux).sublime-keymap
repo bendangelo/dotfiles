@@ -36,6 +36,16 @@
    {"keys": ["g", "T"], "command": "prev_view", "context": [{"key":"setting.command_mode", "operand": true }]},
    {"keys": ["'", "."], "command": "last_edit_line", "context": [{"key":"setting.command_mode", "operand": true }]},
 
+   {"keys": ["1", "t"], "command": "goto_tab","args":{"tab":"1"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["2", "t"], "command": "goto_tab","args":{"tab":"2"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["3", "t"], "command": "goto_tab","args":{"tab":"3"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["4", "t"], "command": "goto_tab","args":{"tab":"4"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["5", "t"], "command": "goto_tab","args":{"tab":"5"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["6", "t"], "command": "goto_tab","args":{"tab":"6"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["7", "t"], "command": "goto_tab","args":{"tab":"7"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["8", "t"], "command": "goto_tab","args":{"tab":"8"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["9", "t"], "command": "goto_tab","args":{"tab":"9"},  "context": [{"key":"setting.command_mode", "operand": true }]},
+
     { "keys": ["j", "j"], "command": "exit_insert_mode",
     "context":
         [
