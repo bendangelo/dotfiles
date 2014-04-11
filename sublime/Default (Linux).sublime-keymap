@@ -33,6 +33,8 @@
 
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
    {"keys": ["g", "t"], "command": "next_view", "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["g", "T"], "command": "prev_view", "context": [{"key":"setting.command_mode", "operand": true }]},
+   {"keys": ["'", "."], "command": "last_edit_line", "context": [{"key":"setting.command_mode", "operand": true }]},
 
     { "keys": ["j", "j"], "command": "exit_insert_mode",
     "context":
