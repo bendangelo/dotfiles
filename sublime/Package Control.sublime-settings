@@ -2,9 +2,7 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"ActionScript 3",
 		"AdvancedNewFile",
-		"Alignment",
 		"ApplySyntax",
 		"Better CoffeeScript",
 		"ChangeQuotes",
@@ -20,8 +18,6 @@
 		"GotoRecent",
 		"GotoTab",
 		"Handlebars",
-		"Inline Calculator",
-		"Invert Selection",
 		"Jade",
 		"JS2Coffee",
 		"JsFormat",
@@ -36,10 +32,7 @@
 		"SideBarEnhancements",
 		"Stylus",
 		"SublimeLinter",
-		"Surround",
 		"Theme - Flatland",
-		"Toggle words",
-		"ToggleQuotes",
 		"Tomorrow Color Schemes",
 		"Vintage Surround"
 	]
