@@ -6,23 +6,17 @@
 		"ApplySyntax",
 		"Better CoffeeScript",
 		"ChangeQuotes",
-		"CoffeeScript",
 		"Color Highlighter",
 		"Dayle Rees Color Schemes",
 		"DocBlockr",
 		"EasyMotion",
-		"Expand Selection to Quotes",
 		"Expand Selection to Whitespace",
 		"Git",
-		"GotoLastEdit",
-		"GotoRecent",
 		"GotoTab",
 		"Handlebars",
 		"Jade",
-		"JS2Coffee",
 		"JsFormat",
 		"LESS",
-		"Move Tabs",
 		"Package Control",
 		"Quick File Move",
 		"Ruby Slim",
@@ -34,6 +28,8 @@
 		"SublimeLinter",
 		"Theme - Flatland",
 		"Tomorrow Color Schemes",
-		"Vintage Surround"
+		"Vintage Escape",
+		"Vintage Surround",
+		"Vintageous"
 	]
 }

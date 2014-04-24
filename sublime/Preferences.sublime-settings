@@ -16,7 +16,8 @@
 		"*.zip"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Dayle Rees Color Schemes/sublime/laravel.tmTheme",
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/frontier (SL).tmTheme",
 	"flatland_sidebar_tree_xsmall": true,
 	"flatland_square_tabs": true,
 	"folder_exclude_patterns":
@@ -35,6 +36,7 @@
 	[
 		"Stylus",
 		"Better CoffeeScript",
+		"Vintage",
 		"Tomorrow Color Schemes",
 		"Color Highlighter"
 	],

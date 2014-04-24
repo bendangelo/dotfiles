@@ -32,7 +32,6 @@
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
    {"keys": ["g", "t"], "command": "next_view", "context": [{"key":"setting.command_mode", "operand": true }]},
    {"keys": ["g", "T"], "command": "prev_view", "context": [{"key":"setting.command_mode", "operand": true }]},
-   {"keys": ["'", "."], "command": "last_edit_line", "context": [{"key":"setting.command_mode", "operand": true }]},
 
    {"keys": ["1", "g", "t"], "command": "goto_tab","args":{"tab":"1"},  "context": [{"key":"setting.command_mode", "operand": true }]},
    {"keys": ["2", "g", "t"], "command": "goto_tab","args":{"tab":"2"},  "context": [{"key":"setting.command_mode", "operand": true }]},
@@ -44,13 +43,7 @@
    {"keys": ["8", "g", "t"], "command": "goto_tab","args":{"tab":"8"},  "context": [{"key":"setting.command_mode", "operand": true }]},
    {"keys": ["9", "g", "t"], "command": "goto_tab","args":{"tab":"9"},  "context": [{"key":"setting.command_mode", "operand": true }]},
 
-    { "keys": ["j", "j"], "command": "exit_insert_mode",
-    "context":
-        [
-        { "key": "setting.command_mode", "operand": false },
-        { "key": "setting.is_widget", "operand": false }
-    ]
-    },
+   { "keys": ["j", "j"], "command": "_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
     { "keys": [",", "h"], "command": "move_group_focus",
         "args": {"direction": "left"},
                 "context": [{"key": "setting.command_mode"}]
@@ -75,5 +68,7 @@
         "context": [{"key": "setting.command_mode", "operand": true}]
     },
     { "keys": [",", "m", "h"], "command": "move_to_group", "args": { "group": 0 } },
-    { "keys": [",", "m", "l"], "command": "move_to_group", "args": { "group": 1 } }
+    { "keys": [",", "m", "l"], "command": "move_to_group", "args": { "group": 1 } },
+
+    { "keys": [",", "t"], "command": "reopen_last_file"}
 ]
