@@ -1,5 +1,5 @@
 [
-    { "keys": ["f2"], "command": "side_bar_move" },
+    { "keys": ["f2"], "command": "quick_file_move" },
     { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
     { "keys": ["alt+up"], "command": "move_caret_top" },
     { "keys": ["ctrl+space"], "command": "expand_selection_to_whitespace" },
@@ -27,8 +27,6 @@
     { "keys": ["f5"], "command": "refresh_folder_list" },
     { "keys": ["ctrl+k", "ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to BOL.sublime-macro"} },
 
-    { "keys": ["ctrl+,"], "command": "insert", "args":{"characters":"\ndebugger                ; \n"}},
-
     {"keys": ["ctrl+space"], "command": "expand_selection_to_whitespace"},
 
     {"keys": ["ctrl+shift+i"], "command": "invert_selection"},
@@ -53,5 +51,29 @@
         { "key": "setting.is_widget", "operand": false }
     ]
     },
-    { "keys": ["ctrl+shift+`"], "command": "insert", "args":{"characters":"`"}}
+    { "keys": [",", "h"], "command": "move_group_focus",
+        "args": {"direction": "left"},
+                "context": [{"key": "setting.command_mode"}]
+            },
+    { "keys": [",", "j"], "command": "move_group_focus",
+        "args": {"direction": "down"},
+                "context": [{"key": "setting.command_mode"}]
+            },
+    { "keys": [",", "k"], "command": "move_group_focus",
+        "args": {"direction": "up"},
+                "context": [{"key": "setting.command_mode"}]
+            },
+    { "keys": [",", "l"], "command": "move_group_focus",
+        "args": {"direction": "right"},
+                "context": [{"key": "setting.command_mode"}]
+            },
+
+    { "keys": [",", "c", "c"], "command": "close",
+        "context": [{"key": "setting.command_mode", "operand": true}]
+    },
+    { "keys": [",", "c", "a"], "command": "close_all",
+        "context": [{"key": "setting.command_mode", "operand": true}]
+    },
+    { "keys": [",", "m", "h"], "command": "move_to_group", "args": { "group": 0 } },
+    { "keys": [",", "m", "l"], "command": "move_to_group", "args": { "group": 1 } }
 ]

@@ -16,6 +16,7 @@
 		"*.zip"
 	],
 	"bold_folder_labels": true,
+	"color_scheme": "Packages/Dayle Rees Color Schemes/sublime/laravel.tmTheme",
 	"flatland_sidebar_tree_xsmall": true,
 	"flatland_square_tabs": true,
 	"folder_exclude_patterns":
@@ -25,20 +26,19 @@
 		".git",
 		".hg",
 		"CVS",
-		"node_modules"
+		"node_modules",
+		"docs"
 	],
 	"font_face": "Liberation Mono",
 	"font_size": 8,
 	"ignored_packages":
 	[
 		"Stylus",
-		"AdvancedNewFile",
-		"Tomorrow Color Schemes",
 		"Better CoffeeScript",
-		"ToggleQuotes"
+		"Tomorrow Color Schemes",
+		"Color Highlighter"
 	],
 	"scroll_speed": 1.0,
-    "color_scheme": "Packages/Themes/ant.tmTheme",
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
