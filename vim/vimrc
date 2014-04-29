@@ -40,7 +40,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
 Bundle 'L9'
 " scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'groenewege/vim-less'

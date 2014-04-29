@@ -43,7 +43,13 @@
    {"keys": ["8", "g", "t"], "command": "goto_tab","args":{"tab":"8"},  "context": [{"key":"setting.command_mode", "operand": true }]},
    {"keys": ["9", "g", "t"], "command": "goto_tab","args":{"tab":"9"},  "context": [{"key":"setting.command_mode", "operand": true }]},
 
-   { "keys": ["j", "j"], "command": "_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
+{ "keys": ["j", "j"], "command": "exit_insert_mode",
+    "context":
+    [
+        { "key": "setting.command_mode", "operand": false },
+        { "key": "setting.is_widget", "operand": false }
+    ]
+},
     { "keys": [",", "h"], "command": "move_group_focus",
         "args": {"direction": "left"},
                 "context": [{"key": "setting.command_mode"}]
