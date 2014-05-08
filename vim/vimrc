@@ -1,4 +1,5 @@
 set t_Co=256
+
 set nocompatible              " be iMproved, required
 set number
 filetype off                  " required
@@ -14,12 +15,33 @@ set autoindent
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 let mapleader=","
+let g:solarized_termcolors=256
+
+map <Leader>s :source $MYVIMRC<CR>
+map <Leader>e :vs $MYVIMRC<CR>
 
 set pastetoggle=<F10>
 set incsearch
 set noswapfile
+set incsearch
+set hlsearch
 set nobackup
 set autoread
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set complete=.,b,u,]
+
+" gvim
+if has('gui_running')
+    set go-=T
+    set guifont=Liberation\ Mono\ 9
+    set color=xoria256
+    set go-=r
+    set go-=L
+endif
 
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
@@ -27,6 +49,8 @@ set autoread
 
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+imap <Tab> <C-P>
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
@@ -34,6 +58,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -41,17 +66,20 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'L9'
 " scripts not on GitHub
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'jonathanfilip/vim-lucius'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'ack.vim'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'https://github.com/mileszs/ack.vim.git'
 " ...
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'dist\|export\|node_modules\|DS_Store\|git'
 map <C-k>b :NERDTreeToggle<CR>
+imap jj <Esc>
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 colorscheme default
 let g:indentLine_faster = 1
@@ -70,12 +98,4 @@ set smarttab
 set expandtab
 
 filetype plugin indent on     " required
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+
