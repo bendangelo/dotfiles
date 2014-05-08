@@ -28,6 +28,7 @@ set hlsearch
 set nobackup
 set autoread
 
+map <silent><leader>t <leader>be<Down>t
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -38,7 +39,6 @@ set complete=.,b,u,]
 if has('gui_running')
     set go-=T
     set guifont=Liberation\ Mono\ 9
-    set color=xoria256
     set go-=r
     set go-=L
 endif
@@ -50,7 +50,6 @@ endif
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-imap <Tab> <C-P>
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
@@ -59,6 +58,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'jlanzarotta/bufexplorer'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -77,7 +77,7 @@ Bundle 'https://github.com/mileszs/ack.vim.git'
 " ...
 let g:ctrlp_custom_ignore = 'dist\|export\|node_modules\|DS_Store\|git'
 map <C-k>b :NERDTreeToggle<CR>
-imap jj <Esc>
+imap jk <Esc>
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
