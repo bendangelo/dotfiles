@@ -1,7 +1,6 @@
 set t_Co=256
 
 set nocompatible              " be iMproved, required
-set number
 filetype off                  " required
 syntax on
 "set mouse=a
@@ -9,7 +8,7 @@ set background=dark
 
 " Auto indent
 filetype indent on
-set autoindent
+filetype plugin indent on     " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
@@ -21,18 +20,22 @@ map <Leader>s :source $MYVIMRC<CR>
 map <Leader>e :vs $MYVIMRC<CR>
 
 set pastetoggle=<F10>
-set incsearch
+set number
 set noswapfile
-set incsearch
+set autoindent
 set hlsearch
 set nobackup
 set autoread
+set laststatus=2
+set ttimeoutlen=50
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+set smarttab
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
-map <silent><leader>t <leader>be<Down>t
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 set complete=.,b,u,]
 
 " gvim
@@ -43,59 +46,53 @@ if has('gui_running')
     set go-=L
 endif
 
-" alternatively, pass a path where Vundle should install bundles
-"let path = '~/some/path/here'
-"call vundle#rc(path)
-
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-sensible'
+Bundle 'jdonaldson/vaxe'
 Bundle 'altercation/vim-colors-solarized'
-
-" The following are examples of different formats supported.
-" Keep bundle commands between here and filetype plugin indent on.
-" scripts on GitHub repos
+Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'jlanzarotta/bufexplorer'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" scripts from http://vim-scripts.org/vim/scripts.html
 Bundle 'L9'
-" scripts not on GitHub
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
-"Bundle 'bling/vim-airline'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'https://github.com/mileszs/ack.vim.git'
-" ...
+
 let g:ctrlp_custom_ignore = 'dist\|export\|node_modules\|DS_Store\|git'
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_max_depth = 5
+
+" Shortcuts
 map <C-k>b :NERDTreeToggle<CR>
 imap jk <Esc>
+" format the entire file
+nmap <leader>fef ggVG=
+map <silent><leader>t <leader>be<Down>t
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+noremap <tab> <c-w><c-w>
+nnoremap <leader>l <C-^>
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 colorscheme default
-let g:indentLine_faster = 1
-set laststatus=2
-set ttimeoutlen=50
 
-set tabstop=4
+" automatic formatting
+autocmd BufWritePre *.slim :%s/\s\+$//e
+autocmd BufWritePre *.rb :%s/\s\+$//e
 
-" size of an "indent"
-set shiftwidth=4
 
-" a combination of spaces and tabs are used to simulate tab stops at a width
-" other than the (hard)tabstop
-set softtabstop=4
-set smarttab
-set expandtab
-
-filetype plugin indent on     " required
+au BufReadPost *.hxp set syntax=haxe
+au BufReadPost *.hx set syntax=haxe
 
