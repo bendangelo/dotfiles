@@ -24,6 +24,8 @@ set number
 set noswapfile
 set autoindent
 set hlsearch
+set ignorecase
+set smartcase
 set nobackup
 set autoread
 set laststatus=2
