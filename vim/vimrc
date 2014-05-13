@@ -13,7 +13,7 @@ filetype plugin indent on     " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-let mapleader=","
+let mapleader="\<space>"
 let g:solarized_termcolors=256
 
 map <Leader>s :source $MYVIMRC<CR>
@@ -24,6 +24,8 @@ set number
 set noswapfile
 set autoindent
 set hlsearch
+set ignorecase
+set smartcase
 set nobackup
 set autoread
 set laststatus=2
