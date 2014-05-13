@@ -91,7 +91,7 @@ colorscheme default
 " automatic formatting
 autocmd BufWritePre *.slim :%s/\s\+$//e
 autocmd BufWritePre *.rb :%s/\s\+$//e
-
+autocmd BufWritePre *.hx :%s/\s\+$//e
 
 au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
