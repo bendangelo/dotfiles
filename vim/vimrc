@@ -43,7 +43,7 @@ set complete=.,b,u,]
 " gvim
 if has('gui_running')
     set go-=T
-    set guifont=Liberation\ Mono\ 9
+    set guifont=Liberation\ Mono\ 8
     set go-=r
     set go-=L
 endif
@@ -61,7 +61,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'L9'
 Bundle 'justinmk/vim-sneak'
-"Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim.git'
