@@ -55,9 +55,9 @@ Bundle 'jdonaldson/vaxe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'L9'
 Bundle 'justinmk/vim-sneak'
@@ -69,6 +69,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'https://github.com/mileszs/ack.vim.git'
+Bundle 'henrik/vim-qargs'
 
 let g:ctrlp_custom_ignore = 'dist\|export\|node_modules\|DS_Store\|git'
 let g:ctrlp_working_path_mode = 2
@@ -86,8 +87,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <tab> <c-w><c-w>
 nnoremap <leader>l <C-^>
+nmap Y y$
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+if executable("ag")
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 colorscheme default
 
