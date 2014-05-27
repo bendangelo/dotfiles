@@ -16,9 +16,6 @@ call vundle#rc()
 let mapleader="\<space>"
 let g:solarized_termcolors=256
 
-map <Leader>s :source $MYVIMRC<CR>
-map <Leader>e :vs $MYVIMRC<CR>
-
 set pastetoggle=<F10>
 set number
 set noswapfile
@@ -81,6 +78,8 @@ let g:ctrlp_max_depth = 5
 " Shortcuts
 map <C-k>b :NERDTreeToggle<CR>
 imap jk <Esc>
+map <leader>s :source $MYVIMRC<CR>
+map <leader>e :vs $MYVIMRC<CR>
 " format the entire file
 nmap <leader>fef ggVG=
 map <silent><leader>t <leader>be<Down>t
@@ -89,7 +88,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <tab> <c-w><c-w>
-nnoremap <leader>l <C-^>
 nmap Y y$
 
 if executable("ag")
@@ -106,4 +104,5 @@ autocmd BufWritePre *.hx :%s/\s\+$//e
 au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
 au BufReadPost *.md set syntax=markdown
+au BufReadPost *.less set syntax=less
 
