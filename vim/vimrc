@@ -86,6 +86,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <tab> <c-w><c-w>
+" Make cw consistent with dw, yw, vw
+onoremap w :execute 'normal! '.v:count1.'w'<CR>
 nmap Y y$
 
 if executable("ag")
