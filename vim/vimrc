@@ -15,6 +15,7 @@ let mapleader="\<space>"
 let g:solarized_termcolors=256
 set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git
 
+set cursorline
 set pastetoggle=<F10>
 set number
 set noswapfile
