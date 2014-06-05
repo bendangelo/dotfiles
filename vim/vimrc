@@ -48,6 +48,9 @@ endif
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
+Plugin 'tommcdo/vim-ninja-feet'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'henrik/vim-qargs'
