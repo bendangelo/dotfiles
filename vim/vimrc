@@ -103,6 +103,7 @@ nnoremap <C-P> :<C-u>Unite  -buffer-name=files   -start-insert file_rec/async<cr
 nnoremap <leader>y :<C-u>Unite -buffer-name=yank    history/yank<cr>
 nnoremap <leader>r :<C-u>Unite -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap <Leader>b :Unite -start-insert buffer tab file_mru directory_mru<cr>
+nnoremap <Leader>p :Unite -start-insert -buffer-name=files file_rec<cr>
 
 autocmd FileType unite call s:unite_settings()
 

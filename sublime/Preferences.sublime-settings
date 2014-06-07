@@ -23,6 +23,7 @@
 	"folder_exclude_patterns":
 	[
 		"dist",
+		"export",
 		".svn",
 		".git",
 		".hg",
@@ -34,8 +35,8 @@
 	"font_size": 8,
 	"ignored_packages":
 	[
-		"Color Highlighter",
-		"Better CoffeeScript"
+		"Better CoffeeScript",
+		"Color Highlighter"
 	],
 	"scroll_speed": 1.0,
 	"theme": "Flatland Dark.sublime-theme",
