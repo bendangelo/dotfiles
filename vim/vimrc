@@ -72,6 +72,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'https://github.com/mileszs/ack.vim.git'
+Plugin 'vim-scripts/a.vim'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = 'dist\|docs\|export\|node_modules\|DS_Store\|git'
@@ -86,12 +87,17 @@ nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 nnoremap <leader>l :CtrlPLine<CR>
 
+nnoremap <leader>aa :A<CR>
+nnoremap <leader>av :AV<CR>
+nnoremap <leader>at :AT<CR>
+
 " Shortcuts
 map <C-k>b :NERDTreeToggle<CR>
 imap jk <Esc>
 map <leader>s :source $MYVIMRC<CR>
 map <leader>e :vs $MYVIMRC<CR>
-map <leader>a :Ack
+map <leader>f :Ack
+
 " format the entire file
 nmap <leader>fef ggVG=
 nnoremap <C-J> <C-W><C-J>
