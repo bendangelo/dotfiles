@@ -96,7 +96,6 @@ map <C-k>b :NERDTreeToggle<CR>
 imap jk <Esc>
 map <leader>s :source $MYVIMRC<CR>
 map <leader>e :vs $MYVIMRC<CR>
-map <leader>f :Ack
 
 " format the entire file
 nmap <leader>fef ggVG=
