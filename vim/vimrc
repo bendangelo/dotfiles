@@ -100,6 +100,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <tab> <c-w><c-w>
 nmap Y y$
+" strip all trailing whitespace in the current file
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+" reselect the text that was just pasted
+nnoremap <leader>V V`]
 
 if executable("ag")
     let g:ackprg = 'ag --nogroup --nocolor --column'
