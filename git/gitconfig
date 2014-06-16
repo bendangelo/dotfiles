@@ -25,9 +25,8 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date=relative --decorate
 
     # list last commits
-    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ (%cr)\\ %Cblue\\ [%cn]" --decorate
 
-    # not very useful
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 
     # display file changes per commit
@@ -37,7 +36,7 @@
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 
     # grep commit messages
-    lgr = !sh -c 'git l --grep=$1 --max-count=10' - # search
+    lgr = !sh -c 'git l --grep=$1 --max-count=20' - # search
 
     lf = log -p # changes of a file
 
@@ -88,6 +87,9 @@
     dc = diff HEAD # show what changed since last commit
     dl = diff HEAD^                 # show what has changed since the commit before the latest commit
     ds = diff --staged
+    # show diff of last commit of given branch
+    dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    d = diff
 
     # reset file
     rf = checkout --
