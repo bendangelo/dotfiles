@@ -7,6 +7,8 @@ syntax on
 " Auto indent
 filetype indent on
 filetype plugin indent on     " required
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -66,6 +68,7 @@ Plugin 'justinmk/vim-sneak'
 " Plugin 'Lokaltog/vim-easymotion'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
@@ -92,8 +95,13 @@ nnoremap <leader>at :AT<CR>
 
 " Shortcuts
 map gb :NERDTreeToggle<CR>
+nmap <silent> g/ :nohlsearch<CR>
+
+" force save
+cmap w!! w !sudo tee % >/dev/null
+
 imap jk <Esc>
-map <leader>s :source $MYVIMRC<CR>
+map <leader>s :so $MYVIMRC<CR>
 map <leader>e :vs $MYVIMRC<CR>
 
 " format the entire file
@@ -104,6 +112,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <tab> <c-w><c-w>
 nmap Y y$
+
 " strip all trailing whitespace in the current file
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
