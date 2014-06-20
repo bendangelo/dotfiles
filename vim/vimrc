@@ -92,7 +92,7 @@ nnoremap <leader>av :AV<CR>
 nnoremap <leader>at :AT<CR>
 
 " Shortcuts
-map <C-k>b :NERDTreeToggle<CR>
+map gb :NERDTreeToggle<CR>
 imap jk <Esc>
 map <leader>s :source $MYVIMRC<CR>
 map <leader>e :vs $MYVIMRC<CR>
