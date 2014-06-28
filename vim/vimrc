@@ -74,6 +74,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'https://github.com/mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git'
