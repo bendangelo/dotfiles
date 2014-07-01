@@ -5,6 +5,7 @@ PATH=$PATH:"$SCRIPT"
 
 EDITOR="vim"
 export EDITOR
+export TERM=screen-256color
 
 # edit prompt
 #export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\[\e[32;1m\]\w\[\e[0m\]\$ "
