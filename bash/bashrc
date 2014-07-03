@@ -22,11 +22,9 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 alias ports='netstat -tulanp'
-alias ff='find . -iname $1'
+f () { find . -name '$1'; }
 
 alias wget='wget -c'
-
-alias dsp='sshfs lautan@ice.throwthegame.com:projects/onetimexi ~/Projects/ice'
 
 # display folder sizes in order
 alias foldsize='du -xB M --max-depth=2 $1 | sort -rn | head -n 15'
@@ -36,8 +34,6 @@ alias dountil='until !!; do :; done'
 
 alias myip='curl ifconfig.me --silent'
 
-alias sshdiff='ssh $1 cat $2 | diff $3 -'
-
 # send alert when connected to server
 alias watch='ping -i 60 -a $1'
 
@@ -45,5 +41,6 @@ alias watch='ping -i 60 -a $1'
 # wget to grab file
 alias share='nc -v -l 9001 < $1'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+alias psgrep='ps axuf | grep -v grep | grep "$1" -i --color=auto'
 
 alias 'ps?'='ps x | grep $1'

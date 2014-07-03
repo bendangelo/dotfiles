@@ -16,6 +16,7 @@ call vundle#rc()
 let g:solarized_termcolors=256
 set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git
 
+set autoread
 set pastetoggle=<F10>
 set number
 set cursorline
