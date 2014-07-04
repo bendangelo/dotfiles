@@ -6,9 +6,9 @@ syntax on
 "set mouse=a
 " Auto indent
 filetype indent on
-filetype plugin indent on     " required
+filetype plugin indent on
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set list listchars=tab:»·,trail:·
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -35,8 +35,28 @@ set softtabstop=4
 set smarttab
 set expandtab
 set shiftwidth=4
-
 set complete=.,b,u,]
+
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+  " Enable spellchecking for Markdown
+  autocmd FileType markdown setlocal spell
+
+  " Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+augroup END
 
 " gvim
 if has('gui_running')
@@ -128,6 +148,15 @@ if executable("ag")
     let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
     let g:unite_source_grep_recursive_opt = ''
     let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+
+    " Use Ag over Grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    " let g:ctrlp_use_caching = 0
 endif
 
 colorscheme default
@@ -142,3 +171,13 @@ au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
 au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+let g:syntastic_check_on_open=1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

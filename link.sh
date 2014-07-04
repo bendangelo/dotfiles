@@ -13,6 +13,7 @@ ln -s $SCRIPTPATH/git/gitconfig ~/.gitconfig
 
 ln -s $SCRIPTPATH/git/gitignore ~/.gitignore
 ln -s $SCRIPTPATH/tmux.conf ~/.tmux.conf
+ln -s $SCRIPTPATH/agignore ~/.agignore
 
 rm ~/.config/sublime-text-2/Packages/User -r
 
