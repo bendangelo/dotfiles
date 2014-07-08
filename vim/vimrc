@@ -143,17 +143,13 @@ nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap gV V`]
 
 if executable("ag")
-    let g:ackprg = 'ag --nogroup --nocolor --column'
-    let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-    let g:unite_source_grep_recursive_opt = ''
-    let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+    let g:ackprg = 'ag --nogroup --nocolor --column -U'
 
     " Use Ag over Grep
-    set grepprg=ag\ --nogroup\ --nocolor
+    set grepprg=ag\ --nogroup\ --nocolor\ -U\ --skip-vcs-ignores
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U'
 
     " ag is fast enough that CtrlP doesn't need to cache
     " let g:ctrlp_use_caching = 0
