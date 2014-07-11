@@ -16,7 +16,6 @@ call vundle#rc()
 let g:solarized_termcolors=256
 set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git
 
-set autoread
 set pastetoggle=<F10>
 set number
 set cursorline
@@ -26,7 +25,6 @@ set hlsearch
 set ignorecase
 set smartcase
 set nobackup
-set autoread
 set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
@@ -169,6 +167,8 @@ au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
 au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
+" reload file on vim focus and buf enter
+au CursorHold * checktime
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
