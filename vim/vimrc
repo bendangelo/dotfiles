@@ -124,7 +124,10 @@ cmap w!! w !sudo tee % >/dev/null
 
 imap jk <Esc>
 map <leader>s :so $MYVIMRC<CR>
-map <leader>e :vs $MYVIMRC<CR>
+map <leader>ev :vs $MYVIMRC<CR>
+map <leader>eb :vs ~/.bashrc<CR>
+map <leader>eg :vs ~/.gitconfig<CR>
+map <leader>es :vs ~/.ssh/config<CR>
 
 " format the entire file
 nmap <leader>fef ggVG=
