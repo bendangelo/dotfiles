@@ -68,6 +68,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'tommcdo/vim-ninja-feet'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
@@ -170,6 +171,7 @@ au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
 au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
+au BufReadPost *.coffee set syntax=coffee
 " reload file on vim focus and buf enter
 au CursorHold * checktime
 
