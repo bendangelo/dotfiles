@@ -129,6 +129,7 @@ map <leader>ev :vs $MYVIMRC<CR>
 map <leader>eb :vs ~/.bashrc<CR>
 map <leader>eg :vs ~/.gitconfig<CR>
 map <leader>es :vs ~/.ssh/config<CR>
+map <leader>eh :vs /etc/hosts<CR>
 
 " format the entire file
 nmap <leader>fef ggVG=
@@ -144,7 +145,7 @@ nmap zl $
 " strip all trailing whitespace in the current file
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
-nnoremap gV V`]
+nnoremap gV `[v`]
 
 if executable("ag")
     let g:ackprg = 'ag --nogroup --nocolor --column -U'
