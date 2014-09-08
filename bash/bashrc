@@ -39,7 +39,7 @@ alias watch='ping -i 60 -a $1'
 
 # share a file over network
 # wget to grab file
-alias share='nc -v -l 9001 < $1'
+alias share='nc -l -p 9001 -q 1 > $1 < /dev/null'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 alias psgrep='ps axuf | grep -v grep | grep "$1" -i --color=auto'
 
