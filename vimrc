@@ -9,6 +9,7 @@ filetype indent on
 filetype plugin indent on
 set list
 set list listchars=tab:»·,trail:·
+set autowrite
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

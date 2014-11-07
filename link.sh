@@ -14,11 +14,7 @@ ln -s $SCRIPTPATH/git/gitconfig ~/.gitconfig
 ln -s $SCRIPTPATH/git/gitignore ~/.gitignore
 ln -s $SCRIPTPATH/tmux.conf ~/.tmux.conf
 ln -s $SCRIPTPATH/agignore ~/.agignore
-
-rm ~/.config/sublime-text-2/Packages/User -r
-
-ln -s $SCRIPTPATH/sublime ~/.config/sublime-text-2/Packages/User
-ln -rs $SCRIPTPATH/vim/vimrc ~/.vimrc
+ln -rs $SCRIPTPATH/vimrc ~/.vimrc
 
 echo "source $SCRIPTPATH/bash/bashrc" >> ~/.bashrc
 

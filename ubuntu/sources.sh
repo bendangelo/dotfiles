@@ -9,5 +9,6 @@ sudo apt-get install nodejs -y
 sudo apt-get install xclip -y
 sudo apt-get install ranger -y
 sudo apt-get install dict -y
+
 # for z
-# git clone git://github.com/rupa/z.git
+# https://github.com/clvv/fasd
