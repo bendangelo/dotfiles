@@ -14,7 +14,7 @@ ln -s $SCRIPTPATH/git/gitconfig ~/.gitconfig
 ln -s $SCRIPTPATH/git/gitignore ~/.gitignore
 ln -s $SCRIPTPATH/tmux.conf ~/.tmux.conf
 ln -s $SCRIPTPATH/agignore ~/.agignore
-ln -rs $SCRIPTPATH/vimrc ~/.vimrc
+ln -rs $SCRIPTPATH/vim/vimrc ~/.vimrc
 
 echo "source $SCRIPTPATH/bash/bashrc" >> ~/.bashrc
 
