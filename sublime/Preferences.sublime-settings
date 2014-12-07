@@ -35,8 +35,20 @@
 	"font_size": 8,
 	"ignored_packages":
 	[
+		"Git",
+		"Theme - Flatland",
+		"Color Highlighter",
+		"Handlebars",
+		"LESS",
+		"SassBeautify",
+		"Jade",
 		"Better CoffeeScript",
-		"Color Highlighter"
+		"ApplySyntax",
+		"Stylus",
+		"Haxe",
+		"Ruby Slim",
+		"Quick File Move",
+		"JsFormat"
 	],
 	"scroll_speed": 1.0,
 	"theme": "Flatland Dark.sublime-theme",

@@ -15,7 +15,7 @@ set autowrite
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 let g:solarized_termcolors=256
-set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git
+set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git,*.meta
 
 set pastetoggle=<F10>
 set number
@@ -96,9 +96,14 @@ Plugin 'https://github.com/mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
+Plugin 'benmills/vimux'
+Plugin 'mtth/scratch.vim'
 call vundle#end()
 
-let g:ctrlp_custom_ignore = 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = {
+            \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git',
+            \ 'file': '\.meta$'
+            \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
@@ -129,6 +134,10 @@ map <leader>eg :vs ~/.gitconfig<CR>
 map <leader>es :vs ~/.ssh/config<CR>
 map <leader>ea :vs ~/.agignore<CR>
 map <leader>eh :vs /etc/hosts<CR>
+map <leader>et :vs ~/.tmux.conf<CR>
+
+" vimux
+map <leader>x :VimuxPromptCommand<CR>
 
 " format the entire file
 nmap <leader>fef ggVG=
