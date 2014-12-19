@@ -19,7 +19,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git,*.meta
 
 set pastetoggle=<F10>
 set number
-set cursorline
+" set cursorline
 set noswapfile
 set autoindent
 set hlsearch
@@ -83,7 +83,6 @@ Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
-Plugin 'morhetz/gruvbox'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-surround'
@@ -98,6 +97,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
 Plugin 'mtth/scratch.vim'
+Plugin 'gorkunov/smartgf.vim.git'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -107,17 +107,25 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
+" searches buffers
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>T :CtrlPBufTag<CR>
 nnoremap <leader>t :CtrlPTag<CR>
+" current working directory
 nnoremap <leader>F :CtrlPCurWD<CR>
+" most recently used files
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
-nnoremap <leader>l :CtrlPLine<CR>
 
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
 nnoremap <leader>at :AT<CR>
+
+" Change color
+nnoremap <leader>cg :color gruvbox<CR>
+nnoremap <leader>ch :color hybrid<CR>
+nnoremap <leader>cr :color railscast<CR>
+nnoremap <leader>cd :color desertEx<CR>
 
 " Shortcuts
 map gb :NERDTreeToggle<CR>
@@ -193,3 +201,7 @@ set splitright
 
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+" smartgf settings
+" cursor line breaks jk support
+let g:smartgf_extensions = ['.cs', '.coffee', '.js']
