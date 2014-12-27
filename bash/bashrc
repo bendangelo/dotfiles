@@ -3,8 +3,7 @@ SCRIPT=$(readlink -f bin)
 
 PATH=$PATH:"$SCRIPT"
 
-EDITOR="vim"
-export EDITOR
+export EDITOR="vim"
 export TERM=screen-256color
 
 # edit prompt
@@ -22,7 +21,6 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 alias ports='netstat -tulanp'
-f () { find . -name '$1'; }
 
 alias wget='wget -c'
 

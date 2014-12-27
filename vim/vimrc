@@ -107,6 +107,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
+" Leader shortcuts
 " searches buffers
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>T :CtrlPBufTag<CR>
@@ -117,24 +118,40 @@ nnoremap <leader>F :CtrlPCurWD<CR>
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 
-nnoremap <leader>aa :A<CR>
-nnoremap <leader>av :AV<CR>
-nnoremap <leader>at :AT<CR>
+nnoremap <leader>A :A<CR>
+nnoremap <leader>Av :AV<CR>
+nnoremap <leader>At :AT<CR>
 
-" Change color
-nnoremap <leader>cg :color gruvbox<CR>
-nnoremap <leader>ch :color hybrid<CR>
-nnoremap <leader>cr :color railscast<CR>
-nnoremap <leader>cd :color desertEx<CR>
+nnoremap <leader><leader> <C-^>
 
-" Shortcuts
-map gb :NERDTreeToggle<CR>
-nmap <silent> g/ :nohlsearch<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
-" force save
-cmap w!! w !sudo tee % >/dev/null
+nnoremap <silent><leader>a :set opfunc=<SID>AckMotion<CR>g@
+xnoremap <silent><leader>a :<C-U>call <SID>AckMotion(visualmode())<CR>
 
-imap jk <Esc>
+function! s:CopyMotionForType(type)
+    if a:type ==# 'v'
+        silent execute "normal! `<" . a:type . "`>y"
+    elseif a:type ==# 'char'
+        silent execute "normal! `[v`]y"
+    endif
+endfunction
+
+function! s:AckMotion(type) abort
+    let reg_save = @@
+
+    call s:CopyMotionForType(a:type)
+
+    execute "normal! :Ack! --literal " . shellescape(@@) . "\<cr>"
+
+    let @@ = reg_save
+endfunction
+
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
 map <leader>eb :vs ~/.bashrc<CR>
@@ -148,7 +165,24 @@ map <leader>et :vs ~/.tmux.conf<CR>
 map <leader>x :VimuxPromptCommand<CR>
 
 " format the entire file
-nmap <leader>fef ggVG=
+nmap <leader>fe ggVG=
+map <Leader>fa ggVG
+
+" Change color
+nnoremap <leader>cg :color gruvbox<CR>
+nnoremap <leader>ch :color hybrid<CR>
+nnoremap <leader>cr :color railscasts<CR>
+nnoremap <leader>cd :color desertEx<CR>
+
+" Shortcuts
+map gb :NERDTreeToggle<CR>
+nmap <silent> g/ :nohlsearch<CR>
+
+" force save
+cmap w!! w !sudo tee % >/dev/null
+
+imap jk <Esc>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -157,6 +191,13 @@ noremap <tab> <c-w><c-w>
 nmap Y y$
 nmap zh ^
 nmap zl $
+map Q @@
+
+" better command line editing
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
 " strip all trailing whitespace in the current file
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
@@ -205,3 +246,4 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " smartgf settings
 " cursor line breaks jk support
 let g:smartgf_extensions = ['.cs', '.coffee', '.js']
+
