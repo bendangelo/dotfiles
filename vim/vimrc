@@ -87,6 +87,8 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'kana/vim-operator-user'
+Plugin 'rgrinberg/vim-operator-gsearch'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
@@ -118,11 +120,13 @@ nnoremap <leader>F :CtrlPCurWD<CR>
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 
-nnoremap <leader>A :A<CR>
-nnoremap <leader>Av :AV<CR>
-nnoremap <leader>At :AT<CR>
+nnoremap <leader>a :A<CR>
+nnoremap <leader>av :AV<CR>
+nnoremap <leader>at :AT<CR>
 
 nnoremap <leader><leader> <C-^>
+
+map g/ <Plug>(operator-ack)
 
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -130,27 +134,6 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
-
-nnoremap <silent><leader>a :set opfunc=<SID>AckMotion<CR>g@
-xnoremap <silent><leader>a :<C-U>call <SID>AckMotion(visualmode())<CR>
-
-function! s:CopyMotionForType(type)
-    if a:type ==# 'v'
-        silent execute "normal! `<" . a:type . "`>y"
-    elseif a:type ==# 'char'
-        silent execute "normal! `[v`]y"
-    endif
-endfunction
-
-function! s:AckMotion(type) abort
-    let reg_save = @@
-
-    call s:CopyMotionForType(a:type)
-
-    execute "normal! :Ack! --literal " . shellescape(@@) . "\<cr>"
-
-    let @@ = reg_save
-endfunction
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
@@ -176,7 +159,7 @@ nnoremap <leader>cd :color desertEx<CR>
 
 " Shortcuts
 map gb :NERDTreeToggle<CR>
-nmap <silent> g/ :nohlsearch<CR>
+nmap <silent> z/ :nohlsearch<CR>
 
 " force save
 cmap w!! w !sudo tee % >/dev/null
