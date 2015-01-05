@@ -93,7 +93,7 @@ Plugin 'kien/ctrlp.vim.git'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'https://github.com/mileszs/ack.vim.git'
+Plugin 'mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
@@ -170,7 +170,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-noremap <tab> <c-w><c-w>
+noremap <Tab> <c-w><c-w>
+noremap <S-Tab> <c-w>w
 nmap Y y$
 nmap zh ^
 nmap zl $
