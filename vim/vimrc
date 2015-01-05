@@ -187,6 +187,7 @@ cnoremap <C-e> <End>
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap gV `[v`]
+nnoremap =p `[v`]=
 
 if executable("ag")
     let g:ackprg = 'ag --nogroup --nocolor --column'
