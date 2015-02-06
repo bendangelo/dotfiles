@@ -19,7 +19,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git,*.meta
 
 set pastetoggle=<F10>
 set number
-" set cursorline
+set cursorline
 set noswapfile
 set autoindent
 set hlsearch
@@ -30,10 +30,10 @@ set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
 set smarttab
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set complete=.,b,u,]
 
 augroup vimrcEx
@@ -199,7 +199,7 @@ if executable("ag")
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
     " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
 endif
 
 colorscheme default
