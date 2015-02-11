@@ -144,6 +144,9 @@ map <leader>ea :vs ~/.agignore<CR>
 map <leader>eh :vs /etc/hosts<CR>
 map <leader>et :vs ~/.tmux.conf<CR>
 
+" fugitive shortcuts
+map <leader>gb :Gblame<CR>
+
 " vimux
 map <leader>x :VimuxPromptCommand<CR>
 
