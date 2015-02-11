@@ -80,7 +80,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
 Plugin 'ConradIrwin/vim-bracketed-paste'
@@ -89,7 +89,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'kana/vim-operator-user'
 Plugin 'rgrinberg/vim-operator-gsearch'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
@@ -99,7 +99,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'benmills/vimux'
 Plugin 'mtth/scratch.vim'
-Plugin 'gorkunov/smartgf.vim.git'
+Plugin 'gorkunov/smartgf.vim'
+Plugin 'slim-template/vim-slim.git'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -132,6 +133,7 @@ vmap <Leader>y "+y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
 nmap <Leader>P "+P
+nmap <Leader>y "+y
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
@@ -187,7 +189,7 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
 " strip all trailing whitespace in the current file
-nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>fw :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap gV `[v`]
 nnoremap =p `[v`]=
@@ -218,6 +220,7 @@ au BufReadPost *.hx set syntax=haxe
 au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
 au BufReadPost *.coffee set syntax=coffee
+au BufReadPost *.slim set syntax=slim
 " reload file on vim focus and buf enter
 au CursorHold * checktime
 
