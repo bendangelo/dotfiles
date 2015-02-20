@@ -73,6 +73,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'cyphactor/vim-open-alternate'
 Plugin 'henrik/vim-qargs'
 Plugin 'tpope/vim-sensible'
 Plugin 'jdonaldson/vaxe'
@@ -124,6 +125,7 @@ nnoremap <leader>m :CtrlPMixed<CR>
 nnoremap <leader>a :A<CR>
 nnoremap <leader>av :AV<CR>
 nnoremap <leader>at :AT<CR>
+nnoremap <leader>as :OpenAlternate<CR>
 
 nnoremap <leader><leader> <C-^>
 

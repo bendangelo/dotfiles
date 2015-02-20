@@ -73,6 +73,7 @@
     chb = checkout -b
     master = checkout master
     dev = checkout dev
+    de = checkout development
     rc = checkout rc
 
     # dealing with branches
@@ -81,15 +82,13 @@
     rmb = !sh -c 'git branch -d $1 && git push origin :$1' - # remove branch from local and remote
 
     # diffs
-    dlc = diff --cached HEAD^ #
     diff = diff --word-diff
     di = diff --cached # show what has changed but has not been added to the index yet via get add
     dc = diff HEAD # show what changed since last commit
     dl = diff HEAD^                 # show what has changed since the commit before the latest commit
-    ds = diff --staged
     # show diff of last commit of given branch
     dr  = "!f() { git diff "$1"^.."$1"; }; f"
-    d = diff
+    d = diff # Show what has changed but haven't been added to the index yet
 
     # reset file
     rf = checkout --
