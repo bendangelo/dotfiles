@@ -158,6 +158,9 @@ map <leader>x :VimuxPromptCommand<CR>
 nmap <leader>fe ggVG=
 map <Leader>fa ggVG
 
+nmap za kA
+nmap zA jA
+
 " Change color
 nnoremap <leader>cg :color gruvbox<CR>
 nnoremap <leader>ch :color hybrid<CR>
@@ -182,6 +185,8 @@ noremap <S-Tab> <c-w>w
 nmap Y y$
 nmap zh ^
 nmap zl $
+vmap zh ^
+vmap zl $
 map Q @@
 
 " better command line editing
