@@ -166,6 +166,8 @@ nnoremap <leader>cg :color gruvbox<CR>
 nnoremap <leader>ch :color hybrid<CR>
 nnoremap <leader>cr :color railscasts<CR>
 nnoremap <leader>cd :color desertEx<CR>
+nnoremap <leader>cw :color badwolf<CR>
+nnoremap <leader>cm :color babymate256<CR>
 
 " Shortcuts
 map gb :NERDTreeToggle<CR>
