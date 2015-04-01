@@ -92,7 +92,6 @@ Plugin 'kana/vim-operator-user'
 Plugin 'rgrinberg/vim-operator-gsearch'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
@@ -158,8 +157,8 @@ map <leader>x :VimuxPromptCommand<CR>
 nmap <leader>fe ggVG=
 map <Leader>fa ggVG
 
-nmap za kA
-nmap zA jA
+nmap za jA
+nmap zA kA
 
 " Change color
 nnoremap <leader>cg :color gruvbox<CR>

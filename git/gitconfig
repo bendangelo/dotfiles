@@ -3,6 +3,8 @@
     email = ben.dangelo2@gmail.com
 [push]
     default = current
+[fetch]
+    prune = true
 [core]
     editor = vim
     exludesfile = ~/.gitignore
@@ -13,6 +15,8 @@
     frag = magenta bold
     old = red bold
     new = green bold
+[mergetool]
+    prompt = false
 [alias]
     # loggers
 
@@ -28,21 +32,21 @@
     # display file changes per commit
     ls = log --pretty=format:\"%C(yellow)%h %Cgreen(%cr)%Creset %s %C(bold blue)[%cn]%Creset\" --name-status
 
+    lf = log ORIG_HEAD.. --stat --no-merges
+
     # display all commits today
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 
     # grep commit messages
     lgr = !sh -c 'git l --grep=$1 --max-count=20' - # search
 
-    lf = log -p # changes of a file
-
-
     cp = cherry-pick
 
     pp = !git pull && git push
 
     # push new branch to remote
-    pr = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    pb = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    pr = !hub pull-request -m
     p = push
 
     a = add -A
@@ -57,12 +61,9 @@
     amend = commit --amend            # rename your last commit
     uncommit = reset --soft HEAD^ # undos the last commit
     # deploy rails
-    deploy = !git checkout master && git pull && git merge dev && git push && cap deploy
+    deploy = !git checkout master && git pull && git merge dev && git push && rake deploy
     production = !git checkout master && git pull && git merge dev && git push && git push production master
     staging = !git checkout dev && git pull && git push staging dev:master
-
-    # deploy npm package
-    publish = !git checkout master && git pull && git merge dev && git push && npm publish
 
     # changing branches
     ch = checkout
@@ -118,5 +119,3 @@
     # remove dead remote branches, cleanup files, remove untracked files, clear stash
     cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
 
-[mergetool]
-    prompt = false
