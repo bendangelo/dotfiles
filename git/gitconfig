@@ -80,7 +80,7 @@
 
     # diffs
     diff = diff --word-diff
-    di = diff --cached # show what has changed but has not been added to the index yet via get add
+    ds = diff --cached # show diff of what has been added to staging
     dc = diff HEAD # show what changed since last commit
     dl = diff HEAD^                 # show what has changed since the commit before the latest commit
     # show diff of last commit of given branch
