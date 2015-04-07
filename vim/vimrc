@@ -73,7 +73,6 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
 Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'cyphactor/vim-open-alternate'
 Plugin 'henrik/vim-qargs'
 Plugin 'tpope/vim-sensible'
 Plugin 'jdonaldson/vaxe'
@@ -97,10 +96,11 @@ Plugin 'mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
-Plugin 'benmills/vimux'
 Plugin 'mtth/scratch.vim'
 Plugin 'gorkunov/smartgf.vim'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'benmills/vimux'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -110,21 +110,34 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
+" RSpec.vim mappings
+map <Leader>tc :call RunCurrentSpecFile()<CR>
+map <Leader>tn :call RunNearestSpec()<CR>
+map <Leader>tl :call RunLastSpec()<CR>
+map <Leader>ta :call RunAllSpecs()<CR>
+
+let g:rspec_command = 'call VimuxRunCommand("rspec {spec}\n")'
+
+function! VimuxSlime()
+  call VimuxSendText(@v)
+ endfunction
+
+ " If text is selected, save it in the v buffer and send that buffer it to tmux
+ vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
+
+ " Select current paragraph and send it to tmux
+"  nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
+
 " Leader shortcuts
-" searches buffers
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>T :CtrlPBufTag<CR>
-nnoremap <leader>t :CtrlPTag<CR>
 " current working directory
 nnoremap <leader>F :CtrlPCurWD<CR>
 " most recently used files
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 
-nnoremap <leader>a :A<CR>
+nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
 nnoremap <leader>at :AT<CR>
-nnoremap <leader>as :OpenAlternate<CR>
 
 nnoremap <leader><leader> <C-^>
 
@@ -146,12 +159,10 @@ map <leader>es :vs ~/.ssh/config<CR>
 map <leader>ea :vs ~/.agignore<CR>
 map <leader>eh :vs /etc/hosts<CR>
 map <leader>et :vs ~/.tmux.conf<CR>
+map <leader>ei :vs .gitignore<CR>
 
 " fugitive shortcuts
 map <leader>gb :Gblame<CR>
-
-" vimux
-map <leader>x :VimuxPromptCommand<CR>
 
 " format the entire file
 nmap <leader>fe ggVG=

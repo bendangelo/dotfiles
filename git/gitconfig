@@ -42,7 +42,8 @@
 
     cp = cherry-pick
 
-    pp = !git pull && git push
+    pp = pull
+    f = fetch
 
     # push new branch to remote
     pb = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
