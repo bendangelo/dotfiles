@@ -39,8 +39,6 @@ alias foldsize='du -xB M --max-depth=2 $1 | sort -rn | head -n 15'
 alias dountil='until !!; do :; done'
 
 alias myip='curl ifconfig.me --silent'
-alias text='curl http://textbelt.com/canada -d number=$1 -d "message=$2"'
-alias textme='curl http://textbelt.com/canada -d number=6472867366 -d "message=$1"'
 
 # send alert when connected to server
 alias watch='ping -i 60 -a $1'
