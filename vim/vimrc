@@ -140,7 +140,6 @@ nnoremap <leader><leader> <C-^>
 map g/ <Plug>(operator-ack)
 
 vmap <Leader>y "+y
-vmap <Leader>d "+d
 nmap <Leader>p "+p
 nmap <Leader>P "+P
 nmap <Leader>y "+y
@@ -163,9 +162,6 @@ map <leader>gb :Gblame<CR>
 " format the entire file
 nmap <leader>fe ggVG=
 map <Leader>fa ggVG
-
-nmap za jA
-nmap zA kA
 
 " Change color
 nnoremap <leader>cg :color gruvbox<CR>
