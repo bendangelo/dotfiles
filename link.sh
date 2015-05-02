@@ -5,9 +5,6 @@ SCRIPTPATH=$(dirname $SCRIPT)
 
 rm ~/.gitconfig
 rm ~/.gitignore
-rm ~/.ssh/config
-
-ln -s $SCRIPTPATH/bash/ssh ~/.ssh/config
 
 ln -s $SCRIPTPATH/git/gitconfig ~/.gitconfig
 
