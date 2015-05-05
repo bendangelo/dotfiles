@@ -75,8 +75,8 @@
     rc = checkout rc
 
     # dealing with branches
-    b = branch
-    ba = branch -a
+    b = branch -v
+    ba = branch -av
     rmb = !sh -c 'git branch -d $1 && git push origin :$1' - # remove branch from local and remote
 
     # diffs
@@ -94,6 +94,7 @@
     # reset everything
     ra = reset --hard
 
+    unmerge = reset --merge ORIG_HEAD
     assume   = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
