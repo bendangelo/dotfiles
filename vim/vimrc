@@ -82,6 +82,7 @@ Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
+Plugin 'tyru/open-browser.vim'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -170,6 +171,16 @@ nnoremap <leader>cr :color railscasts<CR>
 nnoremap <leader>cd :color desertEx<CR>
 nnoremap <leader>cw :color badwolf<CR>
 nnoremap <leader>cm :color babymate256<CR>
+
+" Open links
+map <leader>ow :OpenBrowser https://github.com/EdevMosaic/winterfell<CR>
+map <leader>oc :OpenBrowser https://github.com/EdevMosaic/casterly-rock<CR>
+map <leader>om :OpenBrowser https://github.com/EdevMosaic/mpower<CR>
+map <leader>od :OpenBrowser https://github.com/DarkstarProject/darkstar<CR>
+
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
 map gb :NERDTreeToggle<CR>
