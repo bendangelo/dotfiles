@@ -93,6 +93,7 @@
 
     # reset everything
     ra = reset --hard
+    rh = reset --hard @{u}
 
     unmerge = reset --merge ORIG_HEAD
     assume   = update-index --assume-unchanged
