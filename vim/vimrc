@@ -83,11 +83,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
 Plugin 'tyru/open-browser.vim'
-Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'tpope/vim-surround'
+Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-repeat'
 Plugin 'kana/vim-operator-user'
 Plugin 'rgrinberg/vim-operator-gsearch'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'flazz/vim-colorschemes'
@@ -127,7 +129,7 @@ function! VimuxSlime()
 
 " Leader shortcuts
 " current working directory
-nnoremap <leader>F :CtrlPCurWD<CR>
+nnoremap <leader>tt :CtrlPTag<CR>
 " most recently used files
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
@@ -183,7 +185,8 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
-map gb :NERDTreeToggle<CR>
+nmap gb :NERDTreeToggle<CR>
+nmap gp :TagbarToggle<CR>
 nmap <silent> z/ :nohlsearch<CR>
 
 " force save
@@ -256,10 +259,6 @@ set splitright
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
-" smartgf settings
-" cursor line breaks jk support
-let g:smartgf_extensions = ['.cs', '.coffee', '.js']
-
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
@@ -271,3 +270,5 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+let g:easytags_async=1
