@@ -2,7 +2,7 @@
     name = Ben D'Angelo
     email = ben.dangelo2@gmail.com
 [push]
-    default = current
+    default = simple
 [fetch]
     prune = true
 [core]
@@ -94,6 +94,8 @@
     # reset everything
     ra = reset --hard
     rh = reset --hard @{u}
+
+    r = reset
 
     unmerge = reset --merge ORIG_HEAD
     assume   = update-index --assume-unchanged

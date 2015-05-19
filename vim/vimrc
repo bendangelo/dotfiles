@@ -70,6 +70,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
 Plugin 'michaeljsmith/vim-indent-object'
@@ -78,7 +79,6 @@ Plugin 'tpope/vim-sensible'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
@@ -158,6 +158,8 @@ map <leader>ea :vs ~/.agignore<CR>
 map <leader>eh :vs /etc/hosts<CR>
 map <leader>et :vs ~/.tmux.conf<CR>
 map <leader>ei :vs .gitignore<CR>
+map <leader>ed :vs config/database.yml<CR>
+map <leader>ep :vs package.json<CR>
 
 " fugitive shortcuts
 map <leader>gb :Gblame<CR>
