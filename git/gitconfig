@@ -88,14 +88,13 @@
     dr  = "!f() { git diff "$1"^.."$1"; }; f"
     d = diff # Show what has changed but haven't been added to the index yet
 
-    # reset file
-    rf = checkout --
+    # reset hard
+    rh = reset --hard
 
-    # reset everything
-    ra = reset --hard
-    rh = reset --hard @{u}
+    # reset hard to upstream
+    ru = reset --hard @{u}
 
-    r = reset
+    rs = reset --soft
 
     unmerge = reset --merge ORIG_HEAD
     assume   = update-index --assume-unchanged
