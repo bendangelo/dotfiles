@@ -134,6 +134,8 @@ nnoremap <leader>tt :CtrlPTag<CR>
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 
+map <F5> :CtrlPClearAllCaches<CR>
+
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
 nnoremap <leader>at :AT<CR>
@@ -241,6 +243,7 @@ set background=dark
 autocmd BufWritePre *.slim :%s/\s\+$//e
 autocmd BufWritePre *.rb :%s/\s\+$//e
 autocmd BufWritePre *.hx :%s/\s\+$//e
+autocmd FileType make setlocal noexpandtab
 
 au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
@@ -274,3 +277,4 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 let g:easytags_async=1
+
