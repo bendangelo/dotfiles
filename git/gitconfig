@@ -32,7 +32,7 @@
     # display file changes per commit
     ls = log --pretty=format:\"%C(yellow)%h %Cgreen(%cr)%Creset %s %C(bold blue)[%cn]%Creset\" --name-status
 
-    lf = log ORIG_HEAD.. --stat --no-merges
+    lf = log ..@{u} --stat
 
     # display all commits today
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
