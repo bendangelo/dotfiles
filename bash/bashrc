@@ -46,10 +46,10 @@ alias watch='ping -i 60 -a $1'
 # share a file over network
 # wget to grab file
 alias share='nc -l -p 9001 -q 1 > $1 < /dev/null'
-alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
-alias psgrep='ps axuf | grep -v grep | grep "$1" -i --color=auto'
 
-alias 'ps?'='ps x | grep $1'
+alias webshare='python -c "import socket; print \"Host: \" + socket.gethostbyname(socket.gethostname()) + \":8000\"; import SimpleHTTPServer;SimpleHTTPServer.test();"'
+
+alias 'ps?'='ps aux | grep $1'
 
 alias v='f -e vim' # quick opening files with vim
 alias m='f -e mplayer' # quick opening files with mplayer
