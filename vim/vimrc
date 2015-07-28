@@ -84,11 +84,8 @@ Plugin 'L9'
 Plugin 'justinmk/vim-sneak'
 Plugin 'tyru/open-browser.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-repeat'
 Plugin 'kana/vim-operator-user'
-Plugin 'rgrinberg/vim-operator-gsearch'
-Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'flazz/vim-colorschemes'
@@ -141,7 +138,7 @@ nnoremap <leader>at :AT<CR>
 
 nnoremap <leader><leader> <C-^>
 
-map g/ <Plug>(operator-ack)
+nnoremap g/ :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 vmap <Leader>y "+y
 nmap <Leader>p "+p
