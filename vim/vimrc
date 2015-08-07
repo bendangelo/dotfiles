@@ -175,9 +175,6 @@ nnoremap <leader>cw :color badwolf<CR>
 nnoremap <leader>cm :color babymate256<CR>
 
 " Open links
-map <leader>ow :OpenBrowser https://github.com/EdevMosaic/winterfell<CR>
-map <leader>oc :OpenBrowser https://github.com/EdevMosaic/casterly-rock<CR>
-map <leader>om :OpenBrowser https://github.com/EdevMosaic/mpower<CR>
 map <leader>od :OpenBrowser https://github.com/DarkstarProject/darkstar<CR>
 
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
