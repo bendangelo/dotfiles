@@ -6,4 +6,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 source ~/dotfiles/bash/bashrc
 
+ulimit -S -n 2560
+
 eval "$(fasd --init auto)"
