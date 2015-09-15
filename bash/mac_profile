@@ -1,3 +1,9 @@
+# Rename to bash_profile
+
 export CLICOLOR=1
 
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+source ~/dotfiles/bash/bashrc
+
+eval "$(fasd --init auto)"
