@@ -31,10 +31,10 @@ set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=2
+set softtabstop=4
 set smarttab
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set complete=.,b,u,]
 
 augroup vimrcEx
