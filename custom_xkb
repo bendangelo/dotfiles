@@ -1,0 +1,6 @@
+# Copy and paste this to /usr/share/X11/symbols/pc
+    key <CAPS> {	[ F12		]	};
+    key <NMLK> {	[ Caps_Lock 		]	};
+
+# Delete server-* files in /var/lib/xkb/
+# Restart computer
