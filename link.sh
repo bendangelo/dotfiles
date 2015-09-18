@@ -1,18 +1,12 @@
 #!/bin/sh
 
-SCRIPT=$(readlink -f 0)
-SCRIPTPATH=$(dirname $SCRIPT)
+ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 
-rm ~/.gitconfig
-rm ~/.gitignore
+ln -sf ~/dotfiles/git/gitignore ~/.gitignore
+ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/agignore ~/.agignore
+ln -sf ~/dotfiles/vimrc ~/.vimrc
+ln -sf ~/dotfiles/inputrc ~/.inputrc
+ln -sf ~/dotfiles/bash/bash_aliases ~/.bash_aliases
 
-ln -s $SCRIPTPATH/git/gitconfig ~/.gitconfig
-
-ln -s $SCRIPTPATH/git/gitignore ~/.gitignore
-ln -s $SCRIPTPATH/tmux.conf ~/.tmux.conf
-ln -s $SCRIPTPATH/agignore ~/.agignore
-ln -rs $SCRIPTPATH/vim/vimrc ~/.vimrc
-
-echo "source $SCRIPTPATH/bash/bashrc" >> ~/.bashrc
-
-. ~/.bashrc
+echo "Done"

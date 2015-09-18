@@ -150,7 +150,7 @@ vmap <Leader>P "+P
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
-map <leader>eb :vs ~/dotfiles/bash/bashrc<CR>
+map <leader>eb :vs ~/dotfiles/bash/bash_aliases<CR>
 map <leader>eg :vs ~/.gitconfig<CR>
 map <leader>es :vs ~/.ssh/config<CR>
 map <leader>ea :vs ~/.agignore<CR>
