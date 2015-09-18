@@ -1,8 +1,8 @@
 #!/bin/sh
 
-ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 
-ln -sf ~/dotfiles/git/gitignore ~/.gitignore
+ln -sf ~/dotfiles/gitignore ~/.gitignore
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/agignore ~/.agignore
 ln -sf ~/dotfiles/vimrc ~/.vimrc

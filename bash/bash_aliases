@@ -1,5 +1,7 @@
-# Remap caps lock
-command -v xmodmap >/dev/null 2>&1 || { xmodmap -e "keycode 66 = F12" -e 'clear Lock'; exit 1; }
+# Remap caps lock for guake
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  xmodmap -e "keycode 66 = F12" -e 'clear Lock'
+fi
 
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
