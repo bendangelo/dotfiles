@@ -31,10 +31,10 @@ set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
 set smarttab
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set complete=.,b,u,]
 
 augroup vimrcEx
@@ -56,7 +56,7 @@ augroup vimrcEx
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-  autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=2|set softtabstop=2
+  autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=4|set softtabstop=4
 augroup END
 
 " gvim
