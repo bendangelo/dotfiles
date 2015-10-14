@@ -205,6 +205,8 @@ vmap zh ^
 vmap zl $
 map Q @@
 
+nmap K <C-a>
+
 " better command line editing
 cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
@@ -270,5 +272,4 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-let g:easytags_async=1
-
+let g:vim_markdown_folding_disabled=1
