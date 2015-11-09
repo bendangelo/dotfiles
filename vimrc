@@ -29,10 +29,10 @@ set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
 set smarttab
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set complete=.,b,u,]
 
 augroup vimrcEx
@@ -49,12 +49,9 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
-  " Enable spellchecking for Markdown
-  autocmd FileType markdown setlocal spell
-
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-  autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=2|set softtabstop=2
+  autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=4|set softtabstop=4
 augroup END
 
 " gvim
@@ -148,7 +145,7 @@ vmap <Leader>P "+P
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
-map <leader>eb :vs ~/dotfiles/bash/bashrc<CR>
+map <leader>eb :vs ~/dotfiles/bash/bash_aliases<CR>
 map <leader>eg :vs ~/.gitconfig<CR>
 map <leader>es :vs ~/.ssh/config<CR>
 map <leader>ea :vs ~/.agignore<CR>
@@ -202,6 +199,8 @@ nmap zl $
 vmap zh ^
 vmap zl $
 map Q @@
+
+nmap K <C-a>
 
 " better command line editing
 cnoremap <C-j> <t_kd>
@@ -268,5 +267,4 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-let g:easytags_async=1
-
+let g:vim_markdown_folding_disabled=1
