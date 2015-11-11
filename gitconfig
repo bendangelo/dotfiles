@@ -43,7 +43,7 @@
     cp = cherry-pick
 
     pp = pull
-    bp = pull --rebase=true
+    rp = pull --rebase=true
     f = fetch
 
     # push new branch to remote
