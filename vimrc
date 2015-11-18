@@ -92,6 +92,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
+Plugin 'beloglazov/vim-online-thesaurus'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -268,3 +269,7 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 let g:vim_markdown_folding_disabled=1
+
+let g:online_thesaurus_map_keys = 0
+" Lookup current word
+nnoremap gl :OnlineThesaurusCurrentWord<CR>
