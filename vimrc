@@ -66,6 +66,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/SearchComplete'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
