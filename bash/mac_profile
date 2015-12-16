@@ -4,8 +4,10 @@ export CLICOLOR=1
 
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-source ~/dotfiles/bash/bashrc
+source ~/dotfiles/bash/bash_aliases
 
 ulimit -S -n 2560
 
 eval "$(fasd --init auto)"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

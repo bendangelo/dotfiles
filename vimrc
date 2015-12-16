@@ -52,6 +52,7 @@ augroup vimrcEx
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=4|set softtabstop=4
+  autocmd BufReadPost *.js,*.rb set shiftwidth=2|set softtabstop=2
 augroup END
 
 " gvim
