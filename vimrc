@@ -29,10 +29,10 @@ set laststatus=2
 set ttimeoutlen=50
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
 set smarttab
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set complete=.,b,u,]
 
 augroup vimrcEx
@@ -46,13 +46,12 @@ augroup vimrcEx
     \   exe "normal g`\"" |
     \ endif
 
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
 
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-  autocmd BufReadPost *.cpp,*.h,*.lua set shiftwidth=4|set softtabstop=4
-  autocmd BufReadPost *.js,*.rb set shiftwidth=2|set softtabstop=2
+  " automatic formatting
+  autocmd BufWritePre *.slim,*.rb :%s/\s\+$//e
+  autocmd FileType make setlocal noexpandtab
+
 augroup END
 
 " gvim
@@ -74,7 +73,6 @@ Plugin 'ervandew/supertab'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'henrik/vim-qargs'
 Plugin 'tpope/vim-sensible'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
@@ -232,12 +230,6 @@ endif
 
 colorscheme default
 set background=dark
-
-" automatic formatting
-autocmd BufWritePre *.slim :%s/\s\+$//e
-autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.hx :%s/\s\+$//e
-autocmd FileType make setlocal noexpandtab
 
 au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
