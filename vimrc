@@ -153,7 +153,9 @@ map <leader>ea :vs ~/.agignore<CR>
 map <leader>eh :vs /etc/hosts<CR>
 map <leader>et :vs ~/.tmux.conf<CR>
 map <leader>ei :vs .gitignore<CR>
+
 map <leader>ed :vs config/database.yml<CR>
+map <leader>er :vs config/routes.rb<CR>
 map <leader>ep :vs package.json<CR>
 
 " fugitive shortcuts
@@ -219,10 +221,10 @@ if executable("ag")
     let g:ackprg = 'ag --nogroup --nocolor --column'
 
     " Use Ag over Grep
-    set grepprg=ag\ --nogroup\ --nocolor
+    set grepprg=ag\ --nogroup\ --nocolor\ -U
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U'
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 1
