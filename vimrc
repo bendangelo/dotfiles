@@ -47,6 +47,7 @@ augroup vimrcEx
     \ endif
 
   autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
   " automatic formatting
   autocmd BufWritePre *.slim,*.rb :%s/\s\+$//e
