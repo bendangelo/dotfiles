@@ -106,7 +106,7 @@ let g:ctrlp_max_depth = 5
 " RSpec.vim mappings
 map <Leader>tc :call RunCurrentSpecFile()<CR>
 map <Leader>tn :call RunNearestSpec()<CR>
-map <Leader>tl :call RunLastSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
 map <Leader>ta :call RunAllSpecs()<CR>
 
 let g:rspec_command = 'call VimuxRunCommand("rspec {spec}\n")'
@@ -228,7 +228,7 @@ if executable("ag")
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U'
 
     " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 1
+    let g:ctrlp_use_caching = 0
 endif
 
 colorscheme default

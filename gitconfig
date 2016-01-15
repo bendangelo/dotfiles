@@ -3,6 +3,8 @@
     email = ben.dangelo2@gmail.com
 [push]
     default = simple
+[pull]
+    rebase = true
 [fetch]
     prune = true
 [core]
@@ -43,7 +45,6 @@
     cp = cherry-pick
 
     pp = pull
-    rp = pull --rebase=true
     f = fetch
 
     # push new branch to remote
