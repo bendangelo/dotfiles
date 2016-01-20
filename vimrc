@@ -6,7 +6,6 @@ set suffixesadd+=.rb
 " Auto indent
 filetype indent on
 filetype plugin indent on
-set list
 set list listchars=tab:»·,trail:·
 set autowrite
 
@@ -157,6 +156,7 @@ map <leader>ei :vs .gitignore<CR>
 
 map <leader>ed :vs config/database.yml<CR>
 map <leader>er :vs config/routes.rb<CR>
+map <leader>eG :vs Gemfile<CR>
 map <leader>ep :vs package.json<CR>
 
 " fugitive shortcuts
@@ -225,10 +225,10 @@ if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor\ -U
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U --hidden'
 
     " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
 endif
 
 colorscheme default
