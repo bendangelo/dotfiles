@@ -17,7 +17,6 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git,*.meta
 
 set pastetoggle=<F10>
 set number
-set cursorline
 set noswapfile
 set autoindent
 set hlsearch
