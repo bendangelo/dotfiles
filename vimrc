@@ -102,10 +102,10 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
 " RSpec.vim mappings
-map <Leader>tc :call RunCurrentSpecFile()<CR>
-map <Leader>tn :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>ta :call RunAllSpecs()<CR>
+map zc :call RunCurrentSpecFile()<CR>
+map zn :call RunNearestSpec()<CR>
+map zk :call RunLastSpec()<CR>
+map za :call RunAllSpecs()<CR>
 
 let g:rspec_command = 'call VimuxRunCommand("rspec {spec}\n")'
 
@@ -136,12 +136,12 @@ nnoremap <leader><leader> <C-^>
 
 nnoremap g/ :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-vmap <Leader>y "+y
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-nmap <Leader>y "+y
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+vmap gy "+y
+nmap gp "+p
+nmap gP "+P
+nmap gy "+y
+vmap gp "+p
+vmap gP "+P
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
@@ -182,7 +182,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
 nmap gb :NERDTreeToggle<CR>
-nmap gp :TagbarToggle<CR>
 nmap <silent> z/ :nohlsearch<CR>
 
 " force save
