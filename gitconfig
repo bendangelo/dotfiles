@@ -59,6 +59,8 @@
     view =  !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
     cr =  !hub browse -- pull/"$1"/files
     p = push
+    pstage = push stage @{u}:master
+    pinteg = push integ @{u}:master
 
     a = add -A
     unstage = reset HEAD --

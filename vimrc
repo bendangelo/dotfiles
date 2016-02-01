@@ -98,6 +98,7 @@ let g:ctrlp_custom_ignore = {
             \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git',
             \ 'file': '\.meta$'
             \ }
+let g:ctrlp_map = 'zp'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
@@ -120,11 +121,8 @@ function! VimuxSlime()
 "  nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
 
 " Leader shortcuts
-" current working directory
-nnoremap <leader>tt :CtrlPTag<CR>
 " most recently used files
-nnoremap <leader>r :CtrlPMRUFiles<CR>
-nnoremap <leader>m :CtrlPMixed<CR>
+nnoremap zr :CtrlPMRUFiles<CR>
 
 map <F5> :CtrlPClearAllCaches<CR>
 
