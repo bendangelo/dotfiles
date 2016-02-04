@@ -51,6 +51,7 @@
 
     pp = pull
     f = fetch
+    sq = rebase -i origin/development
 
     # push new branch to remote
     pb = !git push -u origin $(git rev-parse --abbrev-ref HEAD)

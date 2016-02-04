@@ -98,7 +98,6 @@ let g:ctrlp_custom_ignore = {
             \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git',
             \ 'file': '\.meta$'
             \ }
-let g:ctrlp_map = 'zp'
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
 
@@ -157,7 +156,7 @@ map <leader>eG :vs Gemfile<CR>
 map <leader>ep :vs package.json<CR>
 
 " fugitive shortcuts
-map <leader>gb :Gblame<CR>
+map gb :Gblame<CR>
 
 " format the entire file
 nmap <leader>fe ggVG=
@@ -179,7 +178,7 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
-nmap gb :NERDTreeToggle<CR>
+nmap gw :NERDTreeFind<CR>
 nmap <silent> z/ :nohlsearch<CR>
 
 " force save
