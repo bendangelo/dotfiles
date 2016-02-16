@@ -95,7 +95,7 @@ Plugin 'beloglazov/vim-online-thesaurus'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
-            \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git|Temp',
+            \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp',
             \ 'file': '\.meta$'
             \ }
 let g:ctrlp_working_path_mode = 2
