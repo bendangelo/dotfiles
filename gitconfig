@@ -53,15 +53,19 @@
     f = fetch
     sq = rebase -i origin/development
 
+    hotfix = !(git chb $(echo "$1" | sed 's/ /-/g')) && git a && (echo "$1" | xargs -0 git commit -m) && git pb && git pr
+
     # push new branch to remote
     pb = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
-    pr = !hub pull-request -m
+    pr = !git log --format=%B -n 1 HEAD | sed -n '1p' | xargs -0 hub pull-request -m
     ci = !hub ci-status -v
     view =  !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
     cr =  !hub browse -- pull/"$1"/files
+
     p = push
     pstage = push stage @{u}:master
     pinteg = push integ @{u}:master
+    release = !hub pull-request -m "Production Release" -h development -b master
 
     a = add -A
     unstage = reset HEAD --
@@ -76,8 +80,6 @@
     uncommit = reset --soft HEAD^ # undos the last commit
     # deploy rails
     deploy = !git checkout master && git pull && git merge dev && git push && rake deploy
-    production = !git checkout master && git pull && git merge dev && git push && git push production master
-    staging = !git checkout dev && git pull && git push staging dev:master
 
     # changing branches
     ch = checkout
