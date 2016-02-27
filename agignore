@@ -13,6 +13,6 @@ DS_Store
 .DS_Store?
 .git
 git
-.meta
+*.meta
 Library
 Temp

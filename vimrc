@@ -133,6 +133,32 @@ nnoremap <leader><leader> <C-^>
 
 nnoremap g/ :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+nmap c_ ct_
+nmap c- ct-
+nmap c) ct)
+nmap c] ct]
+nmap c} ct}
+nmap c. ct.
+nmap c" ct"
+nmap c' ct'
+nmap c, ct,
+nmap c/ ct/
+nmap c; ct;
+nmap c: ct:
+
+nmap d_ dt_
+nmap d- dt-
+nmap d) dt)
+nmap d] dt]
+nmap d} dt}
+nmap d. dt.
+nmap d" dt"
+nmap d' dt'
+nmap d, dt,
+nmap d/ dt/
+nmap d; dt;
+nmap d: dt:
+
 vmap gy "+y
 nmap gp "+p
 nmap gP "+P
@@ -178,7 +204,8 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
-nmap gw :NERDTreeFind<CR>
+nmap gR :NERDTreeFind<CR>
+nmap gr :NERDTreeToggle<CR>
 nmap <silent> z/ :nohlsearch<CR>
 
 " force save
@@ -265,3 +292,4 @@ let g:vim_markdown_folding_disabled=1
 let g:online_thesaurus_map_keys = 0
 " Lookup current word
 nnoremap gl :OnlineThesaurusCurrentWord<CR>
+let NERDTreeIgnore = ['\.meta$']
