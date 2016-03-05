@@ -16,3 +16,4 @@ git
 *.meta
 Library
 Temp
+*.o
