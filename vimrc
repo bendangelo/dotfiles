@@ -105,7 +105,7 @@ let g:ctrlp_max_depth = 5
 " RSpec.vim mappings
 map zc :call RunCurrentSpecFile()<CR>
 map zn :call RunNearestSpec()<CR>
-map zk :call RunLastSpec()<CR>
+map zj :call RunLastSpec()<CR>
 map za :call RunAllSpecs()<CR>
 
 let g:rspec_command = 'call VimuxRunCommand("rspec {spec}\n")'
@@ -166,6 +166,8 @@ nmap gP "+P
 nmap gy "+y
 vmap gp "+p
 vmap gP "+P
+nmap zp "0p
+nmap zP "0P
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
