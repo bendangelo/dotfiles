@@ -132,7 +132,7 @@ nnoremap <leader>at :AT<CR>
 
 nnoremap <leader><leader> <C-^>
 
-nnoremap g/ :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
+noremap g/ :Ack <cword><cr>
 
 nmap c_ ct_
 nmap c- ct-
