@@ -12,12 +12,13 @@ export EDITOR="vim"
 export TERM=screen-256color
 
 # edit prompt
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\[\e[32;1m\]\w\[\e[0m\]\$ "
+# export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\[\e[32;1m\]\w\[\e[0m\]\$ "
 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lr='ls -R'
+alias g='git'
 
 alias up='sudo apt-get update; sudo apt-get upgrade'
 alias ..='cd ..'
@@ -51,11 +52,3 @@ alias 'ps?'='ps aux | grep $1'
 alias v='f -e vim' # quick opening files with vim
 alias m='f -e mplayer' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
-
-=() {
-    calc="$@"
-    # Uncomment the below for (p → +) and (x → *)
-    calc="${calc//p/+}"
-    calc="${calc//x/*}"
-    echo -ne "$calc\n quit" | gcalccmd | sed 's:^> ::g'
-}

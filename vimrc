@@ -171,6 +171,7 @@ nmap zP "0P
 
 map <leader>s :so $MYVIMRC<CR>
 map <leader>ev :vs $MYVIMRC<CR>
+map <leader>ez :vs ~/.zshrc<CR>
 map <leader>eb :vs ~/dotfiles/bash/bash_aliases<CR>
 map <leader>eg :vs ~/.gitconfig<CR>
 map <leader>es :vs ~/.ssh/config<CR>
