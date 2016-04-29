@@ -59,7 +59,7 @@
     pb = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
     pr = !git log --format=%B -n 1 HEAD | sed -n '1p' | xargs -0 hub pull-request -m
     ci = !hub ci-status -v
-    view =  !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
+    view = !hub browse -- $(hub ci | grep "pull/.*$" -o)
     cr =  !hub browse -- pull/"$1"/files
 
     p = push

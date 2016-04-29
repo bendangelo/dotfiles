@@ -17,3 +17,6 @@ git
 Library
 Temp
 *.o
+cache
+.bundle
+vendor/bundle

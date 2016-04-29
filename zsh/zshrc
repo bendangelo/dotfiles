@@ -5,7 +5,7 @@ export ZSH=/Users/ben/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="fishy"
+ZSH_THEME="clean"
 
 plugins=(git jira zsh-syntax-highlighting vi-mode rails brew vi-like fasd)
 
@@ -17,6 +17,7 @@ export PATH="$PATH:/Users/ben/.rvm/gems/ruby-2.3.0@braavos/bin:/Users/ben/.rvm/g
 source $ZSH/oh-my-zsh.sh
 
 export KEYTIMEOUT=1
+export DISABLE_AUTO_TITLE="true"
 
 # ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
