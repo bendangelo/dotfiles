@@ -25,5 +25,7 @@ bindkey '^r' history-incremental-search-backward
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 source ~/dotfiles/bash/bash_aliases
+bindkey '^U' backward-kill-line
+bindkey '^Y' yank
 
 export JIRA_URL="https://fundthrough.atlassian.net"
