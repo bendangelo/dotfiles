@@ -299,3 +299,6 @@ let g:online_thesaurus_map_keys = 0
 " Lookup current word
 nnoremap gl :OnlineThesaurusCurrentWord<CR>
 let NERDTreeIgnore = ['\.meta$']
+
+" scss linter not working atm
+let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
