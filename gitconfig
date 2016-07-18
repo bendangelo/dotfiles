@@ -60,13 +60,13 @@
     pr = !git log --format=%B -n 1 HEAD | sed -n '1p' | xargs -0 hub pull-request -b development -m
     ci = !hub ci-status -v
     vp = !hub browse -- $(hub ci | grep "pull/.*$" -o)
-    v =  !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
-    cr =  !hub browse -- pull/"$1"/files
+    v = !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
+    cr = !hub browse -- pull/"$1"/files
 
     p = push
     pstage = push stage @{u}:master
     pinteg = push integ @{u}:master
-    release = !hub pull-request -m "Production Release" -h development -b master
+    release = "!hub pull-request -h development -m \"Production Release\" -b master"
 
     a = add -A
     unstage = reset HEAD --
