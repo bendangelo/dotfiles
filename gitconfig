@@ -139,3 +139,7 @@
     # remove dead remote branches, cleanup files, remove untracked files, clear stash
     cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
