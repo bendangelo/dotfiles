@@ -20,3 +20,4 @@ Temp
 cache
 .bundle
 vendor/bundle
+.asset-cache

@@ -93,6 +93,7 @@ Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
 Plugin 'beloglazov/vim-online-thesaurus'
+Plugin 'danielbmarques/vim-ditto'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -232,7 +233,7 @@ vmap zh ^
 vmap zl $
 map Q @@
 
-nmap K <C-a>
+nnoremap K :!open dict:///<cword><cr>
 
 " better command line editing
 cnoremap <C-j> <t_kd>
@@ -302,3 +303,15 @@ let NERDTreeIgnore = ['\.meta$']
 
 " scss linter not working atm
 let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
+
+" Ditto
+au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+
+nmap <leader>di <Plug>ToggleDitto      " Turn it on and off
+
+nmap =d <Plug>DittoNext                " Jump to the next word
+nmap -d <Plug>DittoPrev                " Jump to the previous word
+nmap +d <Plug>DittoGood                " Ignore the word under the cursor
+nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
+nmap ]d <Plug>DittoMore                " Show the next matches
+nmap [d <Plug>DittoLess                " Show the previous matches
