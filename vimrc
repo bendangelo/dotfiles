@@ -225,7 +225,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 noremap <Tab> <c-w><c-w>
-noremap <S-Tab> <c-w>w
+noremap <S-Tab> <c-w>W
 nmap Y y$
 nmap zh ^
 nmap zl $
