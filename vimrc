@@ -66,6 +66,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
@@ -315,3 +316,7 @@ nmap +d <Plug>DittoGood                " Ignore the word under the cursor
 nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
 nmap ]d <Plug>DittoMore                " Show the next matches
 nmap [d <Plug>DittoLess                " Show the previous matches
+
+nmap <silent> <leader>d <Plug>DashSearch
+
+map <leader> *<C-O>:%s///gn<CR>
