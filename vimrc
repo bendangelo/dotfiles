@@ -47,6 +47,7 @@ augroup vimrcEx
   autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd BufRead,BufNewFile *.md setlocal spell
+  autocmd BufRead,BufNewFile *.shader setfiletype hlsl
 
   " automatic formatting
   autocmd BufWritePre *.slim,*.rb :%s/\s\+$//e
@@ -66,6 +67,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'beyondmarc/hlsl.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'tpope/vim-rails'
