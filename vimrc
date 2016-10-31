@@ -47,7 +47,7 @@ augroup vimrcEx
   autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd BufRead,BufNewFile *.md setlocal spell
-  autocmd BufRead,BufNewFile *.shader setfiletype hlsl
+  autocmd BufRead,BufNewFile *.cginc,*.shader setfiletype hlsl
 
   " automatic formatting
   autocmd BufWritePre *.slim,*.rb :%s/\s\+$//e
@@ -322,3 +322,4 @@ nmap [d <Plug>DittoLess                " Show the previous matches
 nmap <silent> <leader>d <Plug>DashSearch
 
 map <leader> *<C-O>:%s///gn<CR>
+set clipboard=unnamed
