@@ -7,11 +7,11 @@ export ZSH=/Users/ben/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="clean"
 
-plugins=(git jira zsh-syntax-highlighting vi-mode rails brew vi-like fasd)
+plugins=(git zsh-syntax-highlighting vi-mode rails vi-like fasd)
 
 # User configuration
 
-export PATH="$PATH:/Users/ben/.rvm/gems/ruby-2.3.0@braavos/bin:/Users/ben/.rvm/gems/ruby-2.3.0@global/bin:/Users/ben/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ben/.rvm/bin"
+export PATH="$PATH:/Users/ben/.rvm/gems/ruby-2.4.0@braavos/bin:/Users/ben/.rvm/gems/ruby-2.4.0@global/bin:/Users/ben/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ben/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -27,5 +27,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/dotfiles/bash/bash_aliases
 bindkey '^U' backward-kill-line
 bindkey '^Y' yank
-
-export JIRA_URL="https://fundthrough.atlassian.net"
