@@ -100,7 +100,7 @@ Plugin 'danielbmarques/vim-ditto'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
-            \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp',
+            \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp\|Builds',
             \ 'file': '\.meta$'
             \ }
 let g:ctrlp_working_path_mode = 2
@@ -129,6 +129,7 @@ function! VimuxSlime()
 nnoremap zr :CtrlPMRUFiles<CR>
 
 map <F5> :CtrlPClearAllCaches<CR>
+nmap <Space> :CtrlP<CR>
 
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
