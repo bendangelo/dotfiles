@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ben/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,7 +11,7 @@ plugins=(git zsh-syntax-highlighting vi-mode rails vi-like fasd)
 
 # User configuration
 
-export PATH="$PATH:/Users/ben/.rvm/gems/ruby-2.4.0@braavos/bin:/Users/ben/.rvm/gems/ruby-2.4.0@global/bin:/Users/ben/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ben/.rvm/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -21,8 +21,6 @@ export DISABLE_AUTO_TITLE="true"
 
 # ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 source ~/dotfiles/bash/bash_aliases
 bindkey '^U' backward-kill-line
