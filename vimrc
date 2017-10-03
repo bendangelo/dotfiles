@@ -152,6 +152,7 @@ nmap c/ ct/
 nmap c; ct;
 nmap c: ct:
 nmap c< ct<
+nmap c> ct>
 
 nmap d_ dt_
 nmap d- dt-
@@ -166,6 +167,7 @@ nmap d/ dt/
 nmap d; dt;
 nmap d: dt:
 nmap d< dt<
+nmap d> dt>
 
 vmap gy "+y
 nmap gp "+p
