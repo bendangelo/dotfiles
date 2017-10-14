@@ -72,7 +72,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
-Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'henrik/vim-qargs'
 Plugin 'tpope/vim-sensible'
@@ -98,6 +98,7 @@ Plugin 'benmills/vimux'
 Plugin 'beloglazov/vim-online-thesaurus'
 Plugin 'danielbmarques/vim-ditto'
 Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'tpope/vim-dispatch'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -286,7 +287,7 @@ let g:html_indent_tags = 'li\|p'
 set splitbelow
 set splitright
 
-let g:syntastic_check_on_open=1
+let g:syntastic_mode_map = {'mode': 'passive'}
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " Search for selected text, forwards or backwards.
@@ -330,22 +331,20 @@ set clipboard=unnamed
 
 " omnisharp
 let g:OmniSharp_selector_ui = 'ctrlp'
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
-let g:SuperTabClosePreviewOnPopupClose = 1
+set noshowmatch
+set completeopt=longest,menuone
 
 augroup omnisharp_commands
     autocmd!
 
     "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
-    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+    " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
     " automatic syntax check on events (TextChanged requires Vim 7.4)
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
     "show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     "The following commands are contextual, based on the current cursor position.
 
@@ -361,9 +360,5 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
     autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
     autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
-    "navigate up by method/property/field
-    autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
-    "navigate down by method/property/field
-    autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
 
 augroup END
