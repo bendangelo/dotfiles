@@ -341,7 +341,7 @@ augroup omnisharp_commands
     " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
     " automatic syntax check on events (TextChanged requires Vim 7.4)
-    autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+    " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
     "show type information automatically when the cursor stops moving
     " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
