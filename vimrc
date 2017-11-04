@@ -91,7 +91,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
@@ -287,7 +287,9 @@ let g:html_indent_tags = 'li\|p'
 set splitbelow
 set splitright
 
-let g:syntastic_mode_map = {'mode': 'passive'}
+" scss linter not working atm
+let g:syntastic_check_on_open = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['c#'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " Search for selected text, forwards or backwards.
@@ -309,8 +311,6 @@ let g:online_thesaurus_map_keys = 0
 nnoremap gl :OnlineThesaurusCurrentWord<CR>
 let NERDTreeIgnore = ['\.meta$']
 
-" scss linter not working atm
-let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
 
 " Ditto
 au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
@@ -348,7 +348,7 @@ augroup omnisharp_commands
 
     "The following commands are contextual, based on the current cursor position.
 
-    autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
+    " autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
     autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
     autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
     autocmd FileType cs nnoremap <leader>fs :OmniSharpFindSymbol<cr>
