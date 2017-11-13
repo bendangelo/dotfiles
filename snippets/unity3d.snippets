@@ -1,0 +1,77 @@
+snippet find
+	GameObject.Find("${1}")${2}
+endsnippet
+snippet gc
+	GetComponent<${1}>()
+endsnippet
+snippet ac
+	AddComponent<${1}>()
+endsnippet
+snippet sar
+	SetActiveRecursively(${1:true})
+endsnippet
+snippet rc
+	[RequireComponent (typeof(${1:AudioSource}))]
+endsnippet
+snippet ee
+	[ExecuteInEditMode]
+endsnippet
+snippet log
+	Debug.Log("${1:msg}");
+endsnippet
+snippet warn
+	Debug.LogWarning("${1:msg}");
+endsnippet
+snippet err
+	Debug.LogError("${1:msg}");
+endsnippet
+snippet inst
+	(${2:GameObject}) GameObject.Instantiate(${1:thing}, Vector3.zero, Quaternion.identity);
+endsnippet
+snippet go
+	GameObject ${1:go} = new GameObject(${2:name});
+endsnippet
+snippet s2i
+	Convert.ToInt32(${1:string})
+endsnippet
+snippet s2f
+	float.Parse(${1:string}, CultureInfo.InvariantCulture.NumberFormat)
+endsnippet
+snippet load
+	(${2:GameObject}) Resources.Load("${1:path}")
+endsnippet
+snippet wait
+	yield return new WaitForSeconds(${1:time})
+endsnippet
+snippet sm
+	SendMessage("${1:message}", ${2:null}, ${3:SendMessageOptions.DontRequireReceiver})
+endsnippet
+snippet forl
+	foreach (${1:int} ${2:var} in ${3:list}) {
+		${4}
+	}
+endsnippet
+snippet ford
+	foreach (KeyValuePair<${1:int}, ${2:int}> pair in ${3:dict}) {
+		${4}
+	}
+endsnippet
+snippet list
+	List<${1:int}> ${2:var} = new List<$1>();
+endsnippet
+snippet dict
+	Dictionary<${1:int}, ${2:int}> ${3:var} = new Dictionary<$1, $2>();
+endsnippet
+snippet sort
+	filtered.Sort(
+		delegate(${1:int} a, $1 b) {
+			return a.CompareTo(b);
+		}
+	);
+endsnippet
+snippet tryget
+	${1:int} ${2:value};
+	if (${3:dict}.TryGetValue("${4:key}", out $2)) {
+		${5}
+	}
+endsnippet

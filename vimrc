@@ -84,6 +84,11 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'tyru/open-browser.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'janko-m/vim-test'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-operator-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -226,7 +231,7 @@ nmap <silent> z/ :nohlsearch<CR>
 " force save
 cmap w!! w !sudo tee % >/dev/null
 
-imap jk <Esc>
+imap jj <Esc>
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -291,6 +296,10 @@ set splitright
 let g:syntastic_check_on_open = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['c#'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+" scss linter not working atm
+let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -311,7 +320,10 @@ let g:online_thesaurus_map_keys = 0
 nnoremap gl :OnlineThesaurusCurrentWord<CR>
 let NERDTreeIgnore = ['\.meta$']
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Renamed jk to jj, added vim test, vim javsacript and snippets. Added unity3d snippets
 " Ditto
 au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
 
@@ -332,19 +344,13 @@ set clipboard=unnamed
 " omnisharp
 let g:OmniSharp_selector_ui = 'ctrlp'
 set noshowmatch
-set completeopt=longest,menuone
+set completeopt=menuone
 
 augroup omnisharp_commands
     autocmd!
 
-    "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
-    " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-
     " automatic syntax check on events (TextChanged requires Vim 7.4)
     " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-
-    "show type information automatically when the cursor stops moving
-    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     "The following commands are contextual, based on the current cursor position.
 
@@ -362,3 +368,13 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
 
 augroup END
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger='\'
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
+autocmd FileType cs UltiSnipsAddFiletypes unity3d
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
