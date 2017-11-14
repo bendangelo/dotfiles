@@ -320,10 +320,6 @@ let g:online_thesaurus_map_keys = 0
 nnoremap gl :OnlineThesaurusCurrentWord<CR>
 let NERDTreeIgnore = ['\.meta$']
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Renamed jk to jj, added vim test, vim javsacript and snippets. Added unity3d snippets
 " Ditto
 au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
 
