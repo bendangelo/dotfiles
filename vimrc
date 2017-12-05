@@ -283,6 +283,7 @@ au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
 au BufReadPost *.coffee set syntax=coffee
 au BufReadPost *.slim set syntax=slim
+au BufReadPost *.lua.txt set syntax=lua
 " reload file on vim focus and buf enter
 au CursorHold * checktime
 
@@ -295,7 +296,7 @@ set splitright
 
 " scss linter not working atm
 let g:syntastic_check_on_open = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['c#'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['cs'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
