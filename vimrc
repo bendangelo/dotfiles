@@ -200,6 +200,7 @@ map <leader>ed :vs config/database.yml<CR>
 map <leader>er :vs config/routes.rb<CR>
 map <leader>eG :vs Gemfile<CR>
 map <leader>ep :vs package.json<CR>
+map <backspace> :
 
 " fugitive shortcuts
 map gb :Gblame<CR>
