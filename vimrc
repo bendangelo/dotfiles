@@ -96,7 +96,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim.git'
 Plugin 'vim-scripts/a.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
@@ -144,7 +144,7 @@ nnoremap <leader>at :AT<CR>
 
 nnoremap <leader><leader> <C-^>
 
-noremap g/ :Ack <cword><cr>
+noremap g/ :Ack! <cword><cr>
 
 nmap c_ ct_
 nmap c- ct-
@@ -200,7 +200,7 @@ map <leader>ed :vs config/database.yml<CR>
 map <leader>er :vs config/routes.rb<CR>
 map <leader>eG :vs Gemfile<CR>
 map <leader>ep :vs package.json<CR>
-map <backspace> :
+map <backspace> :w<CR>
 
 " fugitive shortcuts
 map gb :Gblame<CR>
@@ -336,7 +336,7 @@ nmap [d <Plug>DittoLess                " Show the previous matches
 
 nmap <silent> <leader>d <Plug>DashSearch
 
-map <leader> *<C-O>:%s///gn<CR>
+map gd *``
 set clipboard=unnamed
 
 " omnisharp
@@ -368,7 +368,7 @@ augroup omnisharp_commands
 augroup END
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='\'
+let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
