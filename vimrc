@@ -247,8 +247,6 @@ vmap zh ^
 vmap zl $
 map Q @@
 
-nnoremap K :!open dict:///<cword><cr>
-
 " better command line editing
 cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
@@ -343,6 +341,7 @@ set clipboard=unnamed
 let g:OmniSharp_selector_ui = 'ctrlp'
 set noshowmatch
 set completeopt=menuone
+let g:syntastic_cs_checkers = ['issues']
 
 augroup omnisharp_commands
     autocmd!
