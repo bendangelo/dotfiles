@@ -108,7 +108,7 @@ call vundle#end()
 
 let g:ctrlp_custom_ignore = {
             \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp\|Builds',
-            \ 'file': '\.meta$'
+            \ 'file': '\.meta$|\.asset$'
             \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
@@ -222,7 +222,6 @@ map <leader>od :OpenBrowser https://github.com/DarkstarProject/darkstar<CR>
 
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
 
 " Shortcuts
 nmap gR :NERDTreeFind<CR>
@@ -231,8 +230,6 @@ nmap <silent> z/ :nohlsearch<CR>
 
 " force save
 cmap w!! w !sudo tee % >/dev/null
-
-imap jj <Esc>
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -294,12 +291,10 @@ set splitright
 
 " scss linter not working atm
 let g:syntastic_check_on_open = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['cs'] }
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-" scss linter not working atm
-let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['scss'],'passive_filetypes': ['cs'] }
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_cs_checkers = ['issues']
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -341,30 +336,6 @@ set clipboard=unnamed
 let g:OmniSharp_selector_ui = 'ctrlp'
 set noshowmatch
 set completeopt=menuone
-let g:syntastic_cs_checkers = ['issues']
-
-augroup omnisharp_commands
-    autocmd!
-
-    " automatic syntax check on events (TextChanged requires Vim 7.4)
-    " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-
-    "The following commands are contextual, based on the current cursor position.
-
-    " autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
-    autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
-    autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
-    autocmd FileType cs nnoremap <leader>fs :OmniSharpFindSymbol<cr>
-    autocmd FileType cs nnoremap <leader>fu :OmniSharpFindUsages<cr>
-    "finds members in the current buffer
-    autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr>
-    " cursor can be anywhere on the line containing an issue
-    autocmd FileType cs nnoremap <leader>x  :OmniSharpFixIssue<cr>
-    autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
-    autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
-    autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
-
-augroup END
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-l>"
