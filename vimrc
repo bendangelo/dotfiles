@@ -108,7 +108,7 @@ call vundle#end()
 
 let g:ctrlp_custom_ignore = {
             \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp\|Builds',
-            \ 'file': '\.meta$|\.asset$'
+            \ 'file': '\.(meta|asset)$',
             \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
@@ -294,7 +294,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['scss'],'passive_filetypes': ['cs'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_cs_checkers = ['issues']
+let g:syntastic_cs_checkers = []
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>

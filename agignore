@@ -22,3 +22,4 @@ cache
 vendor/bundle
 .asset-cache
 Builds
+*.asset
