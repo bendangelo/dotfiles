@@ -12,7 +12,7 @@ set autowrite
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-let g:solarized_termcolors=256
+
 set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn,.git,*.meta
 
 set pastetoggle=<F10>
