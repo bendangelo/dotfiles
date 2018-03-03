@@ -102,7 +102,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
 Plugin 'beloglazov/vim-online-thesaurus'
 Plugin 'danielbmarques/vim-ditto'
-Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'bendangelo/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 call vundle#end()
 
