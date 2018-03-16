@@ -329,7 +329,7 @@ nmap [d <Plug>DittoLess                " Show the previous matches
 
 nmap <silent> <leader>d <Plug>DashSearch
 
-map gd *``
+map gd *
 set clipboard=unnamed
 
 " omnisharp
