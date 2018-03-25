@@ -90,7 +90,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-operator-user'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim.git'
@@ -108,10 +108,11 @@ call vundle#end()
 
 let g:ctrlp_custom_ignore = {
             \ 'dir': 'bower_components\|build\|dist\|docs\|export\|node_modules\|DS_Store\|git\|Temp\|Builds',
-            \ 'file': '\.(meta|asset)$',
+            \ 'file': '\.(meta|asset|prefab)$',
             \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_depth = 5
+let g:ctrlp_map = '<Space>'
 
 " RSpec.vim mappings
 map zc :call RunCurrentSpecFile()<CR>
@@ -136,7 +137,6 @@ function! VimuxSlime()
 nnoremap zr :CtrlPMRUFiles<CR>
 
 map <F5> :CtrlPClearAllCaches<CR>
-nmap <Space> :CtrlP<CR>
 
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
