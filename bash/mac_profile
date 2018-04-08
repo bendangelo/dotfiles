@@ -15,3 +15,5 @@ eval "$(fasd --init auto)"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
