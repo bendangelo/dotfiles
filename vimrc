@@ -25,6 +25,7 @@ set smartcase
 set nobackup
 set laststatus=2
 set ttimeoutlen=50
+set noshowmatch
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
 set softtabstop=2
@@ -294,7 +295,6 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['scss'],'passive_filetypes': ['cs'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_cs_checkers = []
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -320,7 +320,8 @@ set clipboard=unnamed
 
 " omnisharp
 let g:OmniSharp_selector_ui = 'ctrlp'
-set noshowmatch
+let g:syntastic_cs_checkers = []
+
 set completeopt=menuone
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
