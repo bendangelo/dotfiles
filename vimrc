@@ -137,7 +137,7 @@ function! VimuxSlime()
 " most recently used files
 nnoremap zr :CtrlPMRUFiles<CR>
 
-map <F5> :CtrlPClearAllCaches<CR>
+map zx :CtrlPClearAllCaches<CR>
 
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>av :AV<CR>
