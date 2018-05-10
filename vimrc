@@ -59,7 +59,7 @@ augroup END
 " gvim
 if has('gui_running')
     set go-=T
-    set guifont=Liberation\ Mono\ 8
+    set guifont=Roboto\ Mono
     set go-=r
     set go-=L
 endif
@@ -88,6 +88,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'janko-m/vim-test'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'posva/vim-vue'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-operator-user'
@@ -333,3 +334,5 @@ autocmd FileType cs UltiSnipsAddFiletypes unity3d
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
