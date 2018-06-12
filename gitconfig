@@ -1,6 +1,6 @@
 [user]
     name = Ben D'Angelo
-    email = ben.dangelo2@gmail.com
+    email = ben@bendangelo.me
 [push]
     default = simple
 [pull]
@@ -39,7 +39,7 @@
     lde = log ..origin/development --stat --oneline
     ldev = log ..origin/dev --stat --oneline
 
-    lmaster = log origin/master..origin/development --stat --oneline
+    lmaster = log origin/master.. --stat --oneline
 
     # display all commits today
     lt = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
