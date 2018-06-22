@@ -27,12 +27,12 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date=relative --decorate
 
     # list last commits
-    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ (%cr)\\ %Cblue\\ [%cn]" --decorate
+    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ (%cr)\\ %Cblue\\ [%an]" --decorate
 
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
 
     # display file changes per commit
-    ls = log --pretty=format:\"%C(yellow)%h %Cgreen(%cr)%Creset %s %C(bold blue)[%cn]%Creset\" --name-status
+    ls = log --pretty=format:\"%C(yellow)%h %Cgreen(%cr)%Creset %s %C(bold blue)[%an]%Creset\" --name-status
 
     lf = log ..@{u} --stat
 
