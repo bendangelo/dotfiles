@@ -11,4 +11,5 @@ brew install dtrx
 brew install tmux
 brew install youtube-dl
 brew instal the_silver_searcher
+brew install reattach-to-user-namespace
 ```
