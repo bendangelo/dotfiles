@@ -102,7 +102,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
-Plugin 'beloglazov/vim-online-thesaurus'
+Plugin 'Ron89/thesaurus_query.vim'
 Plugin 'danielbmarques/vim-ditto'
 Plugin 'bendangelo/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
@@ -313,7 +313,7 @@ let g:vim_markdown_folding_disabled=1
 
 let g:online_thesaurus_map_keys = 0
 " Lookup current word
-nnoremap gl :OnlineThesaurusCurrentWord<CR>
+nnoremap gl :ThesaurusQueryReplaceCurrentWord<CR>
 let NERDTreeIgnore = ['\.meta$']
 
 map gd *
