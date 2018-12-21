@@ -62,6 +62,7 @@
     vp = !hub browse -- $(hub ci | grep "pull/.*$" -o)
     v = !hub browse -- tree/$(git rev-parse --abbrev-ref HEAD)
     cr = !hub browse -- pull/"$1"/files
+    browse = !hub browse
 
     p = push
     pstage = push stage @{u}:master
