@@ -10,6 +10,7 @@ brew install fasd
 brew install dtrx
 brew install tmux
 brew install youtube-dl
-brew instal the_silver_searcher
+brew install the_silver_searcher
+brew install rg
 brew install reattach-to-user-namespace
 ```

@@ -259,17 +259,15 @@ nnoremap <leader>fw :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap gV `[v`]
 nnoremap =p `[v`]=
 
-if executable("ag")
+if executable("rg")
     let g:ackprg = 'ag --nogroup --nocolor --column'
 
-    " Use Ag over Grep
-    set grepprg=ag\ --nogroup\ --nocolor\ -U
+    " Use rg over Grep
+    set grepprg=rg\ --color=never
 
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U --hidden'
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 
-    " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 1
+    let g:ctrlp_use_caching = 0
 endif
 
 colorscheme default
