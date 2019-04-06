@@ -260,7 +260,7 @@ nnoremap gV `[v`]
 nnoremap =p `[v`]=
 
 if executable("rg")
-    let g:ackprg = 'ag --nogroup --nocolor --column'
+    let g:ackprg = 'rg --vimgrep --no-heading'
 
     " Use rg over Grep
     set grepprg=rg\ --color=never
