@@ -260,12 +260,12 @@ nnoremap gV `[v`]
 nnoremap =p `[v`]=
 
 if executable("rg")
-    let g:ackprg = 'rg --vimgrep --no-heading'
+    let g:ackprg = 'rg --vimgrep --no-heading --hidden'
 
     " Use rg over Grep
     set grepprg=rg\ --color=never
 
-    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --glob ""'
 
     let g:ctrlp_use_caching = 0
 endif
