@@ -13,6 +13,13 @@ brew install youtube-dl
 brew install the_silver_searcher
 brew install rg
 brew install reattach-to-user-namespace
+brew install httpie
+brew install ddgr
+```
+
+http debugging
+```
+htrace.sh
 ```
 
 ## Zsh
