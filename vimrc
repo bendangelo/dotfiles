@@ -71,6 +71,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'beyondmarc/hlsl.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -260,12 +261,12 @@ nnoremap gV `[v`]
 nnoremap =p `[v`]=
 
 if executable("rg")
-    let g:ackprg = 'rg --vimgrep --no-heading --hidden'
+    let g:ackprg = 'rg --vimgrep --no-heading --hidden -S'
 
     " Use rg over Grep
     set grepprg=rg\ --color=never
 
-    let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --glob ""'
+    let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --glob "" -S'
 
     let g:ctrlp_use_caching = 0
 endif
