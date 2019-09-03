@@ -49,7 +49,7 @@
 
     cp = cherry-pick
 
-    pp = pull
+    pl = pull
     f = fetch
     sq = rebase -i origin/development
 
