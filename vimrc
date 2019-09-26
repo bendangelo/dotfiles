@@ -71,6 +71,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'beyondmarc/hlsl.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
+Plugin 'https://github.com/rhysd/vim-crystal.git'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'https://github.com/rhysd/vim-crystal.git'
 Plugin 'isaacsloan/vim-slang.git'
@@ -110,6 +111,8 @@ Plugin 'Ron89/thesaurus_query.vim'
 Plugin 'danielbmarques/vim-ditto'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
+Plugin 'thaerkh/vim-indentguides'
+Plugin 'isaacsloan/vim-slang.git'
 call vundle#end()
 
 let g:ctrlp_custom_ignore = {
@@ -203,6 +206,7 @@ map <leader>et :vs ~/.tmux.conf<CR>
 map <leader>ei :vs .gitignore<CR>
 
 map <leader>ed :vs config/database.yml<CR>
+map <leader>ee :vs .env<CR>
 map <leader>er :vs config/routes.rb<CR>
 map <leader>eG :vs Gemfile<CR>
 map <leader>ep :vs package.json<CR>
