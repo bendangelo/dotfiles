@@ -72,6 +72,8 @@ Plugin 'beyondmarc/hlsl.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'https://github.com/rhysd/vim-crystal.git'
+Plugin 'isaacsloan/vim-slang.git'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -281,6 +283,8 @@ au BufReadPost *.less set syntax=less
 au BufReadPost *.coffee set syntax=coffee
 au BufReadPost *.slim set syntax=slim
 au BufReadPost *.lua.txt set syntax=lua
+au BufReadPost *.cr set syntax=crystal
+au BufReadPost *.slang set syntax=slang
 " reload file on vim focus and buf enter
 au CursorHold * checktime
 
