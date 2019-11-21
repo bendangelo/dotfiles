@@ -316,6 +316,7 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 let g:vim_markdown_folding_disabled=1
+set conceallevel=0
 
 let g:online_thesaurus_map_keys = 0
 " Lookup current word
