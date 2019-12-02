@@ -12,6 +12,7 @@ plugins=(git zsh-syntax-highlighting vi-mode fasd web-search zsh-autosuggestions
 # User configuration
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/Library/Application Support/itch/apps/butler"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -337,7 +337,7 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
-autocmd FileType cs UltiSnipsAddFiletypes unity3d
+let g:OmniSharp_server_stdio = 1
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
