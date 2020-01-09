@@ -69,9 +69,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'beyondmarc/hlsl.vim'
-Plugin 'rizzatti/dash.vim'
 Plugin 'vim-scripts/SearchComplete'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'https://github.com/rhysd/vim-crystal.git'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
@@ -88,11 +86,9 @@ Plugin 'tyru/open-browser.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'janko-m/vim-test'
-Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'posva/vim-vue'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-operator-user'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -106,7 +102,6 @@ Plugin 'slim-template/vim-slim.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'benmills/vimux'
 Plugin 'Ron89/thesaurus_query.vim'
-Plugin 'danielbmarques/vim-ditto'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'thaerkh/vim-indentguides'
@@ -226,7 +221,7 @@ nnoremap <leader>cw :color badwolf<CR>
 nnoremap <leader>cm :color babymate256<CR>
 
 " Open links
-map <leader>od :OpenBrowser https://github.com/DarkstarProject/darkstar<CR>
+map <leader>od :OpenBrowser http://localhost:4567<CR>
 
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
