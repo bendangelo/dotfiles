@@ -104,7 +104,6 @@ Plugin 'benmills/vimux'
 Plugin 'Ron89/thesaurus_query.vim'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
-Plugin 'thaerkh/vim-indentguides'
 Plugin 'isaacsloan/vim-slang.git'
 call vundle#end()
 
