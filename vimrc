@@ -47,7 +47,7 @@ augroup vimrcEx
 
   autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-  autocmd BufRead,BufNewFile *.md setlocal spell
+  autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
   autocmd BufRead,BufNewFile *.cginc,*.shader setfiletype hlsl
 
   " automatic formatting
