@@ -314,7 +314,9 @@ set conceallevel=0
 
 let g:online_thesaurus_map_keys = 0
 " Lookup current word
+" :Thesaurus your phrase
 nnoremap gl :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap gl y:ThesaurusQueryReplace <C-r>"<CR>
 let NERDTreeIgnore = ['\.meta$']
 
 map gd *
