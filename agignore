@@ -23,4 +23,3 @@ vendor/bundle
 .asset-cache
 .sass-cache
 Builds
-*.asset
