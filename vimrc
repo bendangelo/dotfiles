@@ -46,6 +46,7 @@ augroup vimrcEx
     \ endif
 
   autocmd BufReadPost *.cpp,*.h,*.lua,*.cs set shiftwidth=4|set softtabstop=4
+  autocmd BufReadPost *.yml,*.yaml,*.yml.txt set shiftwidth=2|set softtabstop=2
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
   autocmd BufRead,BufNewFile *.cginc,*.shader setfiletype hlsl
@@ -260,14 +261,14 @@ nnoremap gV `[v`]
 nnoremap =p `[v`]=
 
 if executable("rg")
-    let g:ackprg = 'rg --vimgrep --no-heading --hidden --no-ignore -S'
+    let g:ackprg = 'rg --vimgrep --no-heading --hidden --no-ignore-dot -S'
 
     " Use rg over Grep
     set grepprg=rg\ --color=never
 
-    let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --no-ignore --glob "" -S'
+    let g:ctrlp_user_command = 'rg %s --hidden --files --color=never --no-ignore-dot --glob "" -S'
 
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
 endif
 
 colorscheme default
@@ -280,6 +281,7 @@ au BufReadPost *.less set syntax=less
 au BufReadPost *.coffee set syntax=coffee
 au BufReadPost *.slim set syntax=slim
 au BufReadPost *.lua.txt set syntax=lua
+au BufReadPost *.yml.txt set syntax=yaml
 au BufReadPost *.cr set syntax=crystal
 au BufReadPost *.slang set syntax=slang
 " reload file on vim focus and buf enter
