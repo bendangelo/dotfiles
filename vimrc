@@ -297,7 +297,7 @@ set splitright
 " scss linter not working atm
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['scss'],'passive_filetypes': ['cs'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['cs'] }
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " Search for selected text, forwards or backwards.
