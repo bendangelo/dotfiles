@@ -71,7 +71,6 @@ Plugin 'gmarik/vundle'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'beyondmarc/hlsl.vim'
 Plugin 'vim-scripts/SearchComplete'
-Plugin 'https://github.com/rhysd/vim-crystal.git'
 Plugin 'tpope/vim-rails'
 Plugin 'wellle/targets.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -88,8 +87,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'janko-m/vim-test'
 Plugin 'pangloss/vim-javascript'
-Plugin 'posva/vim-vue'
-Plugin 'SirVer/ultisnips'
 Plugin 'kana/vim-operator-user'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -276,6 +273,7 @@ set background=dark
 
 au BufReadPost *.hxp set syntax=haxe
 au BufReadPost *.hx set syntax=haxe
+au BufReadPost *.hxml set syntax=haxe
 au BufReadPost *.md set syntax=markdown
 au BufReadPost *.less set syntax=less
 au BufReadPost *.coffee set syntax=coffee
@@ -313,6 +311,7 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 let g:vim_markdown_folding_disabled=1
+au FileType text,markdown setlocal complete+=k
 set conceallevel=0
 
 let g:online_thesaurus_map_keys = 0
@@ -320,6 +319,8 @@ let g:online_thesaurus_map_keys = 0
 " :Thesaurus your phrase
 nnoremap gl :ThesaurusQueryReplaceCurrentWord<CR>
 vnoremap gl y:ThesaurusQueryReplace <C-r>"<CR>
+nnoremap <leader>l :Dict<CR>
+
 let NERDTreeIgnore = ['\.meta$']
 
 map gd *
@@ -331,14 +332,4 @@ let g:syntastic_cs_checkers = []
 
 set completeopt=menuone
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
 let g:OmniSharp_server_stdio = 1
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
