@@ -49,6 +49,7 @@ augroup vimrcEx
   autocmd BufReadPost *.yml,*.yaml,*.yml.txt set shiftwidth=2|set softtabstop=2
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
+  autocmd BufRead,BufNewFile *.gd setfiletype gdscript
   autocmd BufRead,BufNewFile *.cginc,*.shader setfiletype hlsl
 
   " automatic formatting
@@ -76,6 +77,7 @@ Plugin 'wellle/targets.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'henrik/vim-qargs'
+Plugin 'habamax/vim-godot'
 Plugin 'tpope/vim-sensible'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
@@ -333,3 +335,22 @@ let g:syntastic_cs_checkers = []
 set completeopt=menuone
 
 let g:OmniSharp_server_stdio = 1
+
+" Godot
+let g:godot_executable = '/Applications/Godot.app'
+nnoremap <buffer> <leader>gl :GodotRunLast<CR>
+nnoremap <buffer> <leader>gr :GodotRun<CR>
+nnoremap <buffer> <leader>gc :GodotRunCurrent<CR>
+nnoremap <buffer> <leader>gf :GodotRunFZF<CR>
+if !has_key( g:, 'ycm_language_server' )
+  let g:ycm_language_server = []
+endif
+
+let g:ycm_language_server += [
+  \   {
+  \     'name': 'godot',
+  \     'filetypes': [ 'gdscript' ],
+  \     'project_root_files': [ 'project.godot' ],
+  \     'port': 6008
+  \   }
+  \ ]
