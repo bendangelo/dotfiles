@@ -12,6 +12,4 @@ ln -sf ~/dotfiles/vimrc ~/.vimrc
 # ln -sf ~/dotfiles/inputrc ~/.inputrc
 ln -sf ~/dotfiles/bash/bash_aliases ~/.bash_aliases
 
-ln -sf ~/dotfiles/snippets ~/.vim/custom_snippets
-
 echo "Done"
